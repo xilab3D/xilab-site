@@ -67,6 +67,21 @@ enableInlineShortcodes = true
       url = "/contact"
 
   [[params.socialIcons]]
+    name = "location"
+    url = "/contact#localisation"
+    title = "Nous trouver"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "/contact"
+    title = "Nous écrire"
+
+  [[params.socialIcons]]
+    name = "calendar"
+    url = "https://calendar.app.google/MATDAF7zhduQhWx26"
+    title = "Prendre rendez-vous"
+
+  [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/nicolas-gardan"
 
