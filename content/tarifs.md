@@ -1,15 +1,15 @@
 ---
-title: "Tarifs"
-description: "Tarifs de nos prestations — Technicien, Ingénieur, Expert"
+title: "Exemples de tarifs"
+description: "Exemples de tarifs — Technicien, Ingénieur, Expert"
 ---
 
-## Tarifs
+## Exemples de tarifs
 
-Nos prestations sont facturées au taux horaire selon le niveau de compétence mobilisé. Pas de frais cachés, pas d'abonnement.
+Nous vendons de la valeur (notamment notre expérience depuis plus de 20 ans), qui n'est chiffrable uniquement par projet, mais comme on aime bien la transparence voici quelques exemples de coûts sur lesquels nous nous basons forcément pour chiffrer les projets.
 
 <div class="tarifs-grid">
 
-<div class="tarif-card">
+<div class="tarif-card expert">
 <h3>Technicien</h3>
 <div class="tarif-price">70 € <span>/ heure HT</span></div>
 <ul>
@@ -20,7 +20,7 @@ Nos prestations sont facturées au taux horaire selon le niveau de compétence m
 </ul>
 </div>
 
-<div class="tarif-card">
+<div class="tarif-card expert">
 <h3>Ingénieur</h3>
 <div class="tarif-price">107 € <span>/ heure HT</span></div>
 <ul>
