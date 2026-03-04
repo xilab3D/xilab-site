@@ -1,9 +1,6 @@
 ---
 title: "Exemples de tarifs"
-description: "Exemples de tarifs — Technicien, Ingénieur, Expert"
 ---
-
-## Exemples de tarifs
 
 Nous vendons de la valeur (notamment notre expérience depuis plus de 20 ans), qui n'est chiffrable uniquement par projet, mais comme on aime bien la transparence voici quelques exemples de coûts sur lesquels nous nous basons forcément pour chiffrer les projets.
 

@@ -8,29 +8,59 @@ draft: false
 
 ## Une startup d'ingénierie née à Sisteron
 
-XiLAB3D+ est une Jeune Entreprise Innovante (JEI) basée à Sisteron, dans les Alpes-de-Haute-Provence. Fondée en 2024, elle rassemble des ingénieurs passionnés de mécanique numérique, de simulation avancée et d'intelligence artificielle.
+XiLAB3D+ est une Jeune Entreprise Innovante (JEI) basée à Sisteron, dans les Alpes-de-Haute-Provence. Fondée en 2024, elle rassemble des ingénieurs passionnés de mécanique numérique, de simulation avancée et d'intelligence artificielle. Nous défendons fièrement notre idée de créer une entreprise de haute technologie dans une ville à taille humaine (malgré tout très accessible en train ou par l'autoroute). Nos bureaux et notre atelier sont au centre ville (on n'est pas très fan des grandes zones à l'extérieur des villes) et le plus éloigné d'entre nous (un dingue de vélo qui vit il paraît dans la plus belle vallée du monde) met 20 minutes pour venir (en voiture, en vélo la légende dit qu'il met 10 minutes)
 
-Notre mission : rendre l'ingénierie numérique de haut niveau accessible aux PME et laboratoires industriels, sans les lourdeurs des grands cabinets.
+Notre mission : rendre l'ingénierie numérique de haut niveau accessible aux PME et laboratoires industriels, de manière agile.
 
 ![La citadelle de Sisteron, emblème du territoire](/images/sisteron.webp)
 
 ---
 
-## Ce qui nous définit
+## Nos statistiques parlent pour nous
+
+<div class="tarifs-grid">
+
+<div class="tarif-card expert">
+<div class="tarif-price">1</div>
+<ul>
+<li>Bureau</li>
+</ul>
+</div>
+
+<div class="tarif-card expert">
+<div class="tarif-price">3</div>
+<ul>
+<li>Employés</li>
+</ul>
+</div>
+
+<div class="tarif-card expert">
+<div class="tarif-price">15</div>
+<ul>
+<li>Nombre de vélos</li>
+</ul>
+</div>
+
+
+</div>
+
+---
+
+## Nos valeurs
+
+Ah la fameuse rubrique des valeurs de l'entreprise. Allez un petit extrait de livre pour paraître intelligent (Jack London : l'auteur préféré du boss) : "J’aimerais mieux être un superbe météore, chacun de mes atomes irradiant d’un magnifique éclat, plutôt qu'une planète endormie. La fonction propre de l’homme est de vivre, non d’exister".
 
 **La bonne humeur d'abord.** L'ingénierie numérique est un métier exigeant. Nous pensons qu'on travaille mieux dans un environnement détendu, bienveillant et honnête. C'est une condition non négociable.
 
 **La transparence comme obligation.** Pour un ingénieur, la transparence n'est pas une valeur optionnelle — c'est une exigence technique et éthique. Nous communiquons clairement sur ce que nous savons, ce que nous ne savons pas, et ce que nous recommandons.
 
-**Vivre pleinement.** Nous croyons qu'un bureau d'études peut être aussi un lieu de vie. L'équipe arrive à vélo depuis la plus belle vallée du monde (on en est convaincus), les discussions débordent souvent du cadre strictement professionnel, et c'est tant mieux.
+**La bonne humeur d'abord.** On le remet parce qu'il y avait 3 parties à remplir et c'est important
 
 ---
 
-## L'équipe
+## Nos bureaux et notre atelier
 
-Trois ingénieurs, quinze vélos dans le couloir, un atelier de fabrication numérique, et une terrasse avec vue sur les Préalpes.
 
-Nous intervenons sur des projets industriels concrets : conception CAO, simulation par éléments finis, optimisation topologique, jumeaux numériques, IA parcimonieuse, fabrication additive.
 
 ---
 
@@ -54,8 +84,5 @@ Nous utilisons et recommandons des outils reconnus dans l'industrie :
 
 ---
 
-## Où nous trouver
-
-Sisteron, Alpes-de-Haute-Provence — à 2h de Marseille, 1h30 de Grenoble, au cœur d'un territoire industriel dynamique.
 
 → [Contactez-nous](/contact)

@@ -109,9 +109,9 @@ enableInlineShortcodes = true
     weight = 30
 
   [[menu.main]]
-    identifier = "tarifs"
-    name = "Tarifs"
-    url = "/tarifs/"
+    identifier = "rd"
+    name = "R&D"
+    url = "/rd/"
     weight = 40
 
   [[menu.main]]
