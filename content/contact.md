@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-description: "Contactez XiLAB3D+ — Bureau d'études en ingénierie numérique"
+description: "Contactez XiLAB3D+ — Bureau d'études et R&D en ingénierie numérique"
 ---
 
 ## Écrivez-nous

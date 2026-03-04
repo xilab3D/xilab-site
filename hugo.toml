@@ -24,7 +24,7 @@ enableInlineShortcodes = true
   ShowPostNavLinks = true
   comments = false
   math = false
-  description = "Bureau d'études en ingénierie numérique — Conception, Simulation, IA"
+  description = "Bureau d'études et R&D en ingénierie numérique — Conception, Simulation, IA"
   author = "XiLAB3D+"
 
   [params.profileMode]
