@@ -7,7 +7,7 @@ description: "Contactez XiLAB3D+ — Bureau d'études en ingénierie numérique"
 
 Nous répondons généralement dans les 24 heures ouvrées.
 
-<form class="contact-form" action="https://formsubmit.co/contact@xilab.tech" method="POST">
+<form class="contact-form" action="https://formsubmit.co/ngardan@xilab.tech" method="POST">
   <input type="hidden" name="_subject" value="Contact via xilab.tech">
   <input type="hidden" name="_next" value="https://xilab.tech/contact/?merci=1">
   <input type="hidden" name="_captcha" value="false">
@@ -52,7 +52,7 @@ Nicolas Gardan<br>
 <div class="contact-item">
 <strong>Ingénierie</strong>
 Bureau d'études<br>
-<a href="mailto:contact@xilab.tech">contact@xilab.tech</a>
+<a href="mailto:ngardan@xilab.tech">ngardan@xilab.tech</a>
 </div>
 
 <div class="contact-item">
