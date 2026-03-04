@@ -57,12 +57,17 @@ h1, h2, h3 {
   color: var(--darkcolor);
 }
 
-/* Logo texte — remplacement si pas d'image */
+/* Logo texte — pas de coupure */
+.logo {
+  flex-shrink: 0;
+}
+
 .logo a {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 /* --- Page d'accueil (profile mode) --- */
