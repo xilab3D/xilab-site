@@ -37,6 +37,10 @@ enableInlineShortcodes = true
     imageTitle = "XiLAB3D+ : l'ingénierie agile"
 
     [[params.profileMode.buttons]]
+      name = "À propos"
+      url = "/about"
+
+    [[params.profileMode.buttons]]
       name = "Services"
       url = "/services"
 
