@@ -70,6 +70,17 @@ h1, h2, h3 {
   padding: 48px 0;
 }
 
+/* Logo image : pas de crop en cercle */
+.profile-mode .profile_inner img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: auto;
+  height: auto;
+  max-width: 290px;
+  max-height: 70px;
+  margin-bottom: 24px;
+}
+
 .profile-mode .profile_inner h1 {
   font-family: var(--font-serif);
   font-size: 2.4rem;

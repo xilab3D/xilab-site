@@ -3,6 +3,11 @@ languageCode = "fr-FR"
 defaultContentLanguage = "fr"
 title = "XiLAB3D+"
 theme = "PaperMod"
+
+[params.label]
+  text = "XiLAB3D+ : l'ingénierie agile"
+  icon = "/favicon.svg"
+  iconHeight = 22
 enableRobotsTXT = true
 enableInlineShortcodes = true
 
@@ -24,12 +29,12 @@ enableInlineShortcodes = true
 
   [params.profileMode]
     enabled = true
-    title = "XiLAB3D+"
-    subtitle = "Bureau d'études en ingénierie numérique.\nConception, simulation avancée, modélisation de la connaissance et IA parcimonieuse."
-    imageUrl = "images/logo.svg"
-    imageWidth = 120
-    imageHeight = 120
-    imageTitle = "XiLAB3D+"
+    title = "Bureau d'études et R&D en ingénierie numérique"
+    subtitle = "Jumeaux Numériques (IA frugale, simulation numérique)\net Fabrication Additive"
+    imageUrl = "images/logo-xilab.svg"
+    imageWidth = 290
+    imageHeight = 70
+    imageTitle = "XiLAB3D+ : l'ingénierie agile"
 
     [[params.profileMode.buttons]]
       name = "Services"
