@@ -39,32 +39,6 @@ Nous répondons généralement dans les 24 heures ouvrées.
 
 ---
 
-## Contacts directs
-
-<div class="contact-grid">
-
-<div class="contact-item">
-<strong>Direction & R&D</strong>
-Nicolas Gardan<br>
-<a href="https://www.linkedin.com/in/nicolas-gardan">LinkedIn</a>
-</div>
-
-<div class="contact-item">
-<strong>Ingénierie</strong>
-Bureau d'études<br>
-<a href="mailto:ngardan@xilab.tech">ngardan@xilab.tech</a>
-</div>
-
-<div class="contact-item">
-<strong>Adresse</strong>
-29 rue Saunerie<br>
-04200 Sisteron, France
-</div>
-
-</div>
-
----
-
 ## Localisation
 
 <div class="map-container">
