@@ -52,3 +52,17 @@ Localisation : Sisteron, France
 ## Contact
 
 → [Contactez-nous](/contact)
+
+---
+
+## Philosophie de ce site
+
+Ce site est volontairement minimaliste. Pas d'images de fond, pas de scripts inutiles, pas de traceurs tiers.
+
+Ce choix est motivé par trois raisons :
+
+**Empreinte écologique** — Un site léger consomme moins d'énergie à chaque visite. Multiplié par des milliers de chargements, l'impact devient significatif.
+
+**Lisibilité par les outils d'IA** — Les moteurs de recherche nouvelle génération et les assistants IA indexent et comprennent mieux un contenu textuel structuré qu'une page surchargée d'effets visuels. Un site textuel est un site qui parle clairement.
+
+**Respect du lecteur** — Un site rapide et lisible respecte le temps et la connexion de chaque visiteur.

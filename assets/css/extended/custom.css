@@ -313,6 +313,14 @@ h1, h2, h3 {
   font-size: 13px;
 }
 
+.site-philosophy {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--secondary);
+  font-style: italic;
+  opacity: 0.75;
+}
+
 /* --- Mobile --- */
 @media (max-width: 640px) {
   .tarifs-grid {
