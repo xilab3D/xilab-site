@@ -21,7 +21,13 @@ enableInlineShortcodes = true
   ShowReadingTime = false
   ShowBreadCrumbs = false
   ShowToc = false
+  TocOpen = false
   ShowPostNavLinks = true
+
+  [params.assets]
+    favicon = "favicon.svg"
+    favicon16x16 = "favicon.svg"
+    favicon32x32 = "favicon.svg"
   comments = false
   math = false
   description = "Bureau d'études et R&D en ingénierie numérique — Conception, Simulation, IA"
@@ -107,6 +113,9 @@ enableInlineShortcodes = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
 
 [markup]
   [markup.goldmark]
