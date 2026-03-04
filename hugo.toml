@@ -1,3 +1,105 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://xilab.tech/"
+languageCode = "fr-FR"
+defaultContentLanguage = "fr"
+title = "XiLAB3D+"
+theme = "PaperMod"
+enableRobotsTXT = true
+enableInlineShortcodes = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  defaultTheme = "light"
+  disableThemeToggle = true
+  ShowShareButtons = false
+  ShowReadingTime = false
+  ShowBreadCrumbs = false
+  ShowToc = false
+  ShowPostNavLinks = true
+  comments = false
+  math = false
+  description = "Bureau d'études en ingénierie numérique — Conception, Simulation, IA"
+  author = "XiLAB3D+"
+
+  [params.profileMode]
+    enabled = true
+    title = "XiLAB3D+"
+    subtitle = "Bureau d'études en ingénierie numérique.\nConception, simulation avancée, modélisation de la connaissance et IA parcimonieuse."
+    imageUrl = "images/logo.svg"
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "XiLAB3D+"
+
+    [[params.profileMode.buttons]]
+      name = "Services"
+      url = "/services"
+
+    [[params.profileMode.buttons]]
+      name = "Compétences"
+      url = "/competences"
+
+    [[params.profileMode.buttons]]
+      name = "Formations"
+      url = "/formations"
+
+    [[params.profileMode.buttons]]
+      name = "Tarifs"
+      url = "/tarifs"
+
+    [[params.profileMode.buttons]]
+      name = "Contact"
+      url = "/contact"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/nicolas-gardan"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/xilab3dplus"
+
+[menu]
+  [[menu.main]]
+    identifier = "services"
+    name = "Services"
+    url = "/services/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "competences"
+    name = "Compétences"
+    url = "/competences/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "formations"
+    name = "Formations"
+    url = "/formations/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "tarifs"
+    name = "Tarifs"
+    url = "/tarifs/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 50
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 60
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,329 @@
+/* ============================================================
+   XiLAB3D+ — Custom CSS
+   Inspiré de pmichaillat/hugo-website
+   Polices système uniquement, minimaliste professionnel
+   ============================================================ */
+
+/* --- Variables XiLAB --- */
+:root {
+  --darkcolor: #4a6fa5;
+  --lightcolor: #dce6f5;
+  --main-width: 720px;
+  --nav-width: 1024px;
+  --gap: 24px;
+  --content-gap: 20px;
+  --header-height: 48px;
+  --radius: 4px;
+
+  /* Typographie système */
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --textsize: 17px;
+  --lineheight: 1.6;
+}
+
+/* --- Typographie globale --- */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--textsize);
+  line-height: var(--lineheight);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: normal;
+  letter-spacing: -0.01em;
+}
+
+/* --- Header / Navigation --- */
+.header {
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: var(--nav-width);
+}
+
+.nav a {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.nav a.active {
+  border-bottom: 2px solid var(--darkcolor);
+  color: var(--darkcolor);
+}
+
+/* Logo texte — remplacement si pas d'image */
+.logo a {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+}
+
+/* --- Page d'accueil (profile mode) --- */
+.profile {
+  padding: 48px 0;
+}
+
+.profile-mode .profile_inner h1 {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.profile-mode .profile_inner p {
+  font-size: 1.05rem;
+  color: var(--secondary);
+  max-width: 560px;
+  line-height: 1.65;
+  white-space: pre-line;
+}
+
+/* Boutons d'accueil */
+.profile-mode .profile_inner .buttons {
+  margin-top: 28px;
+  gap: 10px;
+}
+
+.profile-mode .profile_inner .buttons a {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  padding: 8px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.profile-mode .profile_inner .buttons a:hover {
+  border-color: var(--darkcolor);
+  color: var(--darkcolor);
+  background: var(--lightcolor);
+}
+
+/* Icônes sociales */
+.social-icons a {
+  color: var(--secondary);
+  transition: color 0.15s;
+}
+
+.social-icons a:hover {
+  color: var(--darkcolor);
+}
+
+/* --- Contenu principal --- */
+.main {
+  max-width: var(--main-width);
+}
+
+.post-content h2 {
+  font-size: 1.35rem;
+  margin-top: 2.2em;
+  margin-bottom: 0.6em;
+  color: var(--primary);
+}
+
+.post-content h3 {
+  font-size: 1.1rem;
+  margin-top: 1.8em;
+  color: var(--primary);
+}
+
+/* --- Listes de sections (compétences, blog) --- */
+.entry-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+
+.entry-content {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.55;
+}
+
+/* --- Grille tarifs --- */
+.tarifs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.tarif-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+}
+
+.tarif-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.tarif-price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--darkcolor);
+  margin: 8px 0 16px;
+}
+
+.tarif-price span {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--secondary);
+}
+
+.tarif-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.tarif-card ul li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tarif-card ul li:last-child {
+  border-bottom: none;
+}
+
+.tarif-card.expert {
+  border-color: var(--darkcolor);
+}
+
+/* --- Grille compétences --- */
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.competence-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.competence-item strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+
+/* --- Cas projets --- */
+.case-study {
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+
+.case-study:first-child {
+  border-top: none;
+}
+
+.case-study img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin: 16px 0;
+}
+
+/* --- Contact --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.contact-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.contact-item a {
+  color: var(--darkcolor);
+}
+
+/* --- Formations --- */
+.formations-list {
+  margin: 24px 0;
+}
+
+.formation-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.formation-item:last-child {
+  border-bottom: none;
+}
+
+.formation-item h3 {
+  font-size: 1rem;
+  margin: 0 0 4px;
+}
+
+.formation-item p {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin: 0;
+}
+
+/* --- Liens dans le contenu --- */
+.post-content a {
+  color: var(--darkcolor);
+  text-decoration: underline;
+  text-decoration-color: var(--lightcolor);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s;
+}
+
+.post-content a:hover {
+  text-decoration-color: var(--darkcolor);
+}
+
+/* --- Footer --- */
+.footer {
+  font-size: 13px;
+}
+
+/* --- Mobile --- */
+@media (max-width: 640px) {
+  .tarifs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competences-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
