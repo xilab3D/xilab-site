@@ -8,9 +8,11 @@ draft: false
 
 ## Une startup d'ingénierie née à Sisteron
 
-XiLAB3D+ est une jeune entreprise innovante (JEI) basée à Sisteron, dans les Alpes-de-Haute-Provence. Fondée en 2024, elle rassemble des ingénieurs passionnés de mécanique numérique, de simulation avancée et d'intelligence artificielle.
+XiLAB3D+ est une Jeune Entreprise Innovante (JEI) basée à Sisteron, dans les Alpes-de-Haute-Provence. Fondée en 2024, elle rassemble des ingénieurs passionnés de mécanique numérique, de simulation avancée et d'intelligence artificielle.
 
 Notre mission : rendre l'ingénierie numérique de haut niveau accessible aux PME et laboratoires industriels, sans les lourdeurs des grands cabinets.
+
+![La citadelle de Sisteron, emblème du territoire](/images/sisteron.webp)
 
 ---
 
@@ -46,8 +48,9 @@ En parallèle des missions clients, XiLAB3D+ conduit ses propres projets de rech
 
 Nous utilisons et recommandons des outils reconnus dans l'industrie :
 
+- **4D_Additive** (CoreTechnologie) — logiciel de fabrication additive et préparation de pièces
 - **NeurEco** (Adagos) — réseaux de neurones compacts pour la simulation rapide
-- **Simerics** — simulation CFD industrielle
+- **SimericsMP+** (Simerics) — simulation CFD industrielle
 
 ---
 

@@ -39,7 +39,8 @@ h1, h2, h3 {
 
 /* --- Header / Navigation --- */
 .header {
-  border-bottom: 1px solid var(--border);
+  background: #f0f0f0;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .nav {
@@ -419,11 +420,9 @@ h1, h2, h3 {
 }
 
 .site-philosophy {
-  margin-top: 8px;
-  font-size: 11px;
+  margin-top: 0;
   color: var(--secondary);
   font-style: italic;
-  opacity: 0.75;
 }
 
 /* --- Mobile --- */
