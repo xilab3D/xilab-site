@@ -31,9 +31,9 @@ enableInlineShortcodes = true
     enabled = true
     title = "Bureau d'études et R&D en ingénierie numérique"
     subtitle = "Jumeaux Numériques (IA frugale, simulation numérique)\net Fabrication Additive"
-    imageUrl = "images/logo-xilab.svg"
-    imageWidth = 290
-    imageHeight = 70
+    imageUrl = "images/logo-xilab.png"
+    imageWidth = 280
+    imageHeight = 137
     imageTitle = "XiLAB3D+ : l'ingénierie agile"
 
     [[params.profileMode.buttons]]
