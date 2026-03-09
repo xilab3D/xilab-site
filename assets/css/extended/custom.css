@@ -166,11 +166,33 @@ h1, h2, h3 {
   line-height: 1.55;
 }
 
+/* --- Cartes statistiques (Qui sommes-nous) --- */
+.stats-grid .tarif-card {
+  text-align: center;
+}
+
+.stats-grid .tarif-price {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.stats-grid ul {
+  text-align: center;
+}
+
 /* --- Grille tarifs --- */
 .tarifs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
+  margin: 32px 0;
+}
+
+/* Grille services : 4 colonnes forcées sur desktop */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin: 32px 0;
 }
 
@@ -230,7 +252,7 @@ h1, h2, h3 {
 
 .competence-item {
   padding: 16px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--darkcolor);
   border-radius: var(--radius);
   font-size: 0.9rem;
 }
@@ -240,6 +262,14 @@ h1, h2, h3 {
   font-size: 0.95rem;
   margin-bottom: 4px;
   color: var(--primary);
+}
+
+/* --- Logo page R&D --- */
+.rd-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 32px;
 }
 
 /* --- Cas projets --- */
@@ -414,6 +444,73 @@ h1, h2, h3 {
   text-decoration-color: var(--darkcolor);
 }
 
+/* --- Blog : bouton retour --- */
+.blog-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--secondary);
+  text-decoration: none !important;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.blog-back:hover {
+  border-color: var(--darkcolor);
+  color: var(--darkcolor);
+}
+
+/* --- Blog : boutons catégories --- */
+.blog-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 32px;
+}
+
+.blog-cat-btn {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  padding: 8px 20px;
+  border: 1px solid var(--darkcolor);
+  border-radius: var(--radius);
+  color: var(--darkcolor);
+  text-decoration: none !important;
+  transition: background 0.15s, color 0.15s;
+}
+
+.blog-cat-btn:hover {
+  background: var(--darkcolor);
+  color: #fff;
+}
+
+/* Bouton Move2Digital orange */
+.btn-move2digital {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 8px 22px;
+  border: 2px solid #e07b20;
+  border-radius: var(--radius);
+  background: transparent;
+  color: #e07b20;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-move2digital:hover {
+  background: #e07b20;
+  color: #fff;
+}
+
 /* --- Footer --- */
 .footer {
   font-size: 13px;
@@ -425,10 +522,20 @@ h1, h2, h3 {
   font-style: italic;
 }
 
+.footer-legal {
+  color: var(--secondary);
+  font-style: normal;
+  font-size: 13px;
+}
+
 /* --- Mobile --- */
 @media (max-width: 640px) {
   .tarifs-grid {
     grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .competences-grid {

@@ -41,7 +41,7 @@ SolidWorks, CATIA, Rhino — modélisation complexe
 
 <div class="competence-item">
 <strong>IA parcimonieuse</strong>
-PINN, NeurEco, modèles réduits (ROM)
+PINN, NeurEco, modèles réduits
 </div>
 
 <div class="competence-item">
@@ -64,6 +64,12 @@ Scripting, automatisation, traitement de données
 HyperMesh, remaillage, nettoyage géométrique
 </div>
 
+<div class="competence-item">
+<strong>Audits</strong>
+Simulation numérique, Jumeaux Numériques et IA (<a href="/move2digital">certifié Move2Digital</a>)
+</div>
+
+
 </div>
 
 ---
@@ -71,3 +77,8 @@ HyperMesh, remaillage, nettoyage géométrique
 ## Cas projets
 
 Exemples de missions réalisées :
+
+- [Équipement agricole — Comportement mécanique en braquage](/cas-projets/tracteur)
+- [Fixation ferroviaire — Optimisation d'un système d'attache](/cas-projets/rail)
+- [Cuve béton — Modélisation et simulation](/cas-projets/beton)
+- [G1 Aircraft — Intégration pile à combustible hydrogène](/cas-projets/avion)

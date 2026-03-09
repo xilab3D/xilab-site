@@ -51,20 +51,8 @@ enableInlineShortcodes = true
       url = "/services"
 
     [[params.profileMode.buttons]]
-      name = "Compétences"
-      url = "/competences"
-
-    [[params.profileMode.buttons]]
-      name = "Formations"
-      url = "/formations"
-
-    [[params.profileMode.buttons]]
-      name = "Tarifs"
-      url = "/tarifs"
-
-    [[params.profileMode.buttons]]
-      name = "Contact"
-      url = "/contact"
+      name = "Partenaires"
+      url = "/partenaires"
 
   [[params.socialIcons]]
     name = "location"
@@ -82,12 +70,17 @@ enableInlineShortcodes = true
     title = "Prendre rendez-vous"
 
   [[params.socialIcons]]
+    name = "presse"
+    url = "/presse"
+    title = "Espace presse"
+
+  [[params.socialIcons]]
     name = "linkedin"
-    url = "https://www.linkedin.com/in/nicolas-gardan"
+    url = "https://www.linkedin.com/company/108783640/"
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/xilab3dplus"
+    url = "https://github.com/xilab3D"
 
 [menu]
   [[menu.main]]
@@ -97,22 +90,16 @@ enableInlineShortcodes = true
     weight = 10
 
   [[menu.main]]
-    identifier = "competences"
-    name = "Compétences"
-    url = "/competences/"
-    weight = 20
-
-  [[menu.main]]
-    identifier = "formations"
-    name = "Formations"
-    url = "/formations/"
-    weight = 30
-
-  [[menu.main]]
     identifier = "rd"
     name = "R&D"
     url = "/rd/"
     weight = 40
+
+  [[menu.main]]
+    identifier = "outils"
+    name = "Outils"
+    url = "/outils/"
+    weight = 45
 
   [[menu.main]]
     identifier = "blog"
@@ -133,6 +120,9 @@ enableInlineShortcodes = true
   term = ["HTML"]
 
 [markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
