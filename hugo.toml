@@ -30,12 +30,12 @@ enableInlineShortcodes = true
     favicon32x32 = "favicon.svg"
   comments = false
   math = false
-  description = "Bureau d'études et R&D en ingénierie numérique — Conception, Simulation, IA"
+  description = "Bureau d'études et de R&D en ingénierie numérique — Conception, Simulation, IA"
   author = "XiLAB3D+"
 
   [params.profileMode]
     enabled = true
-    title = "Bureau d'études et R&D en ingénierie numérique"
+    title = "Bureau d'études et de R&D en ingénierie numérique"
     subtitle = "Jumeaux Numériques (IA frugale, simulation numérique)\net Fabrication Additive"
     imageUrl = "images/logo-xilab.png"
     imageWidth = 280
