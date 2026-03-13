@@ -43,7 +43,7 @@ TocOpen: false
 
 ---
 
-## Organisation atelier IA & Simulation numérique — [MICADO](https://www.micado.com/)
+## Organisation atelier IA & Simulation numérique — [MICADO](https://www.afmicado.fr/)
 
 L'atlier IA & Simulation Numérique de MICADO travaille sur :
 - Comprendre, définir les concepts, les outils et les méthodes
