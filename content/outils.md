@@ -17,8 +17,8 @@ Nous travaillons en ingénierie numérique mais avec toujours comme objectif d'a
 
 Nous intervenons principalement dans nos missions sur les phases en amont d'un projet, en innovation. Nous développons ainsi des méthodologies et modèles sur des outils industriels reconnus, que nous pouvons distribuer en partenariat avec les éditeurs lors du transfert des technologies développées dans le cadre des projets. Nous nous appuyons ainsi sur les outils suivants :
 
-- **4D_Additive** ([CoreTechnologie](https://coretechnologie.com/fr/)) — logiciel de fabrication additive et préparation de pièces
-- **NeurEco** ([Adagos](https://www.adagos.com/neureco)) — réseaux de neurones compacts pour la simulation rapide
+- **4D_Additive** ([CoreTechnologie](https://coretechnologie.com/fr/)) — logiciel de préparation de modèles CAO pour fabrication additive
+- **NeurEco** ([Adagos](https://www.adagos.com/neureco)) — réseaux de neurones parcimonieux pour l'IA physique
 - **SimericsMP+** ([Simerics](https://www.simerics.com/simulation-gallery/)) — simulation CFD industrielle
 - **Hyperworks** Dans nos précédents postes nous avons développé une compétence sur toute la suite Hyperworks d'ALTAIR particulièrement sur Hypersmesh, Optistruct et Simsolid. Nous travaillons sur ce sujet en partenariat avec [SOFTPOWER](https://www.softpower-sas.sas)
 
