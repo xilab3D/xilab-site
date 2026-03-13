@@ -3,6 +3,7 @@ title: "AINUM-e : notre programme R&D et le statut Jeune Entreprise Innovante"
 date: 2025-03-24
 description: "Comment XiLAB3D+ développe un procédé original d'assistance numérique pour les jumeaux numériques, et pourquoi ce travail nous a valu le statut de Jeune Entreprise Innovante."
 tags: ["R&D", "jumeaux numériques", "IA", "JEI"]
+categories: ["rd"]
 draft: false
 ---
 
@@ -10,7 +11,7 @@ draft: false
 
 En mars 2025, XiLAB3D+ a obtenu le statut de **Jeune Entreprise Innovante (JEI)** auprès de l'administration fiscale française. Ce statut — encadré par le Code général des impôts — reconnaît que plus d'un tiers de nos charges sont consacrées à des activités de recherche et développement. Pour nous, c'est la validation formelle d'un choix de fond : construire une entreprise d'ingénierie qui ne se contente pas d'appliquer l'état de l'art, mais qui contribue à le faire avancer.
 
-Concrètement, sur l'exercice 2024, nous avons engagé **79 164 € de frais de personnel R&D** et **113 294 € de dépenses R&D totales**, soit 36,3 % de nos charges totales. Ce n'est pas un artifice comptable — c'est simplement le reflet de ce que font Nicolas, Noé et Arthur au quotidien.
+Concrètement, au quotidien, l'équipe consacre l’essentiel de leur temps à des travaux de recherche et développement : conception d’architectures techniques nouvelles, expérimentation de solutions, développement de prototypes et amélioration continue de nos technologies. Ces travaux impliquent des phases régulières d’essais, d’itérations et de validation afin de lever des verrous techniques et d’aboutir à des solutions robustes et innovantes.
 
 ---
 
@@ -57,14 +58,6 @@ Concrètement, un ingénieur qui utiliserait notre procédé pourrait :
 - Capitaliser la connaissance d'un projet sur l'autre, dans un format exploitable par l'IA
 
 C'est exactement l'esprit de nos missions : apporter les outils de l'ingénierie numérique avancée aux PME et laboratoires industriels, sans la complexité et les coûts des grandes structures.
-
----
-
-## L'équipe derrière AINUM-e
-
-- **Nicolas Gardan** — Docteur en informatique, Habilité à Diriger des Recherches (HDR), 20 ans d'expérience en modélisation numérique et systèmes à base de connaissances
-- **Noé Perrotin** — Master en Ingénierie et Ergonomie, ingénieur R&D
-- **Arthur Deswarte** — Master en Métrologie et Performance, ingénieur R&D
 
 ---
 

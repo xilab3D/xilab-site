@@ -1,6 +1,6 @@
 ---
 title: "Formations"
-description: "Formations en ingénierie numérique — FEA, IA, simulation, logiciels"
+description: "Formations en ingénierie numérique — FEA, IA, FA, simulation, logiciels"
 ---
 
 ## Formation & Transfert de compétences
@@ -17,7 +17,7 @@ XiLAB3D+ propose des formations techniques dispensées par des ingénieurs prati
 
 <div class="formation-item">
 <h3>Éléments finis appliqués (FEA)</h3>
-<p>Fondements théoriques et mise en pratique sur cas industriels. Logiciels : Abaqus, Ansys, Code_Aster. Durée : 2 à 5 jours.</p>
+<p>Fondements théoriques et mise en pratique sur cas industriels. Logiciels : Suite Altair, Code_Aster, PreProMax. Durée : 2 à 5 jours en fonction des besoins</p>
 </div>
 
 <div class="formation-item">
@@ -27,7 +27,7 @@ XiLAB3D+ propose des formations techniques dispensées par des ingénieurs prati
 
 <div class="formation-item">
 <h3>Initiation à l'IA en ingénierie</h3>
-<p>Panorama de l'IA appliquée à l'ingénierie : ML, deep learning, modèles réduits. Python requis. Durée : 1 à 2 jours.</p>
+<p>Panorama de l'IA appliquée à l'ingénierie : ML, deep learning, modèles réduits. Applications Python requis. Durée : 1 à 2 jours.</p>
 </div>
 
 <div class="formation-item">
@@ -36,13 +36,18 @@ XiLAB3D+ propose des formations techniques dispensées par des ingénieurs prati
 </div>
 
 <div class="formation-item">
-<h3>NeurEco — Réseaux de neurones physiques</h3>
-<p>Création de modèles de substitution rapides (ROM) avec NeurEco. Idéal pour jumeaux numériques. Durée : 1 à 2 jours.</p>
+<h3>Les LLM pour l'ingénieur</h3>
+<p>Comment utiliser les LLM de manière efficace pour les projets en ingénierie, impacts écologiques, revue des outils disponibles, cybersécurité. Durée : 3 heures</p>
 </div>
 
 <div class="formation-item">
-<h3>4D-Additive — Simulation fabrication additive</h3>
-<p>Simulation du procédé de fabrication additive et compensation des distorsions. Durée : 1 à 2 jours.</p>
+<h3>Les bases de l'impression 3D polymère</h3>
+<p>Modélisation 3D, préparation des modèles pour l'impression 3D, revue des procédés/matériaux, impression de cas concrets. Durée : 1 à 3 jours en fonction des besoins</p>
+</div>
+
+<div class="formation-item">
+<h3>Prise en main et conception avancées sur Rhino3D</h3>
+<p>Notions de modèles en CAO, prise en main de Rhino 3D, modélisation surfacique avancée, modélisation paramétrique avec Grasshopper. Durée : 1 à 5 jours en fonction des besoins</p>
 </div>
 
 </div>

@@ -1,8 +1,9 @@
 ---
 title: "Qui sommes-nous ?"
-date: 2024-01-15
+date: 2024-09-23
 description: "Présentation de l'équipe XiLAB3D+, ses valeurs, sa culture et son histoire"
 tags: ["équipe", "entreprise"]
+categories: ["generalites"]
 draft: false
 ---
 
@@ -16,9 +17,17 @@ Notre mission : rendre l'ingénierie numérique de haut niveau accessible aux PM
 
 ---
 
+## Équipe
+
+L'équipe XiLAB3D+ réunit des ingénieurs spécialisés en mécanique numérique, simulation avancée et intelligence artificielle. Nous partageons un goût commun pour la bonne humeur, la transparence et le travail bien fait. Nous sommes spécialisés dans l'accompagnement de projets en ingénierie agile : du concept à l'objet, optimisation et allégement des formes, matériaux architecturés, résistance mécanique et études fluidiques, prédiction robuste grâce à l'IA, maintenance prédictive ... bref les moutons à 5 pattes ça nous connaît (le mouton de Sisteron a aussi son représentant 😉. 
+
+![Le mouton a 5 pattes de l'ingénierie](/images/mouton.png)
+
+---
+
 ## Nos statistiques parlent pour nous
 
-<div class="tarifs-grid">
+<div class="tarifs-grid stats-grid">
 
 <div class="tarif-card expert">
 <div class="tarif-price">1</div>
@@ -37,13 +46,48 @@ Notre mission : rendre l'ingénierie numérique de haut niveau accessible aux PM
 <div class="tarif-card expert">
 <div class="tarif-price">15</div>
 <ul>
-<li>Nombre de vélos</li>
+<li>Vélos</li>
 </ul>
 </div>
 
-
 </div>
 
+---
+
+## Notre passé est important
+Jeune société mais avec une expérience d'accompagnement de PME basée sur une approche terrain au plus près des problématiques
+
+<div class="services-grid">
+
+<div class="tarif-card expert">
+<div class="tarif-price">>800</div>
+<ul>
+<li>Visites de PME</li>
+</ul>
+</div>
+
+<div class="tarif-card expert">
+<div class="tarif-price">480</div>
+<ul>
+<li>Projets industriels traités</li>
+</ul>
+</div>
+
+<div class="tarif-card expert">
+<div class="tarif-price">300</div>
+<ul>
+<li>Personnes formés</li>
+</ul>
+</div>
+
+<div class="tarif-card expert">
+<div class="tarif-price">12</div>
+<ul>
+<li>Projets R&D</li>
+</ul>
+</div>
+
+</div>
 ---
 
 ## Nos valeurs
@@ -60,29 +104,11 @@ Ah la fameuse rubrique des valeurs de l'entreprise. Allez un petit extrait de li
 
 ## Nos bureaux et notre atelier
 
+Créer son entreprise en R&D / ingénierie numérique dans une zone de revitalisation, est-ce que cela apporte plus de contraintes que d'avantages ? Ce qu'il y a de certain c'est que quand tu mets 5 minutes pour arriver au bureau et que tu as une vue comme ça la journée commence bien 😉
 
+![Bureaux XILAB](/images/bureau.jpeg)
 
----
-
-## Nos activités R&D
-
-En parallèle des missions clients, XiLAB3D+ conduit ses propres projets de recherche appliquée :
-
-- **Matériaux architecturés** — structures légères à comportement mécanique optimisé
-- **IA frugale** — modèles réduits (ROM), réseaux de neurones physiquement informés (PINN), NeurEco
-- **Projets collaboratifs** — en lien avec des laboratoires, des partenaires industriels et des organismes de financement (BPI, CIFRE)
-
----
-
-## Nos partenaires logiciels
-
-Nous utilisons et recommandons des outils reconnus dans l'industrie :
-
-- **4D_Additive** (CoreTechnologie) — logiciel de fabrication additive et préparation de pièces
-- **NeurEco** (Adagos) — réseaux de neurones compacts pour la simulation rapide
-- **SimericsMP+** (Simerics) — simulation CFD industrielle
-
----
+Ateliers : photo à venir pour l'instant trop mal rangé
 
 
 → [Contactez-nous](/contact)

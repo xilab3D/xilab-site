@@ -3,6 +3,7 @@ title: "Introduction à la simulation par éléments finis en ingénierie indust
 date: 2024-06-01
 description: "Principes fondamentaux de la simulation FEA et cas d'usage en bureau d'études"
 tags: ["simulation", "FEA", "méthodes numériques"]
+categories: ["formation"]
 draft: false
 ---
 

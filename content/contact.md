@@ -58,6 +58,6 @@ Nous répondons généralement dans les 24 heures ouvrées.
 
 ## Collaborations & Partenariats
 
-Pour des demandes de collaboration R&D, projets CIFRE, ou partenariats technologiques, contactez directement la direction.
+Pour des demandes de collaboration R&D, projets CIFRE, ou partenariats technologiques, vous pouvez contacter directement Nicolas Gardan (voir contact [Presse](/presse))
 
 → [À propos de XiLAB3D+](/about)
