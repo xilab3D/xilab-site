@@ -36,10 +36,10 @@ enableInlineShortcodes = true
   [params.profileMode]
     enabled = true
     title = "Bureau d'études et de R&D en ingénierie numérique"
-    subtitle = "Jumeaux Numériques (IA frugale, simulation numérique)\net Fabrication Additive"
+    subtitle = "Jumeaux Numériques, Simulation Numérique et Fabrication Additive"
     imageUrl = "images/logo-xilab.png"
-    imageWidth = 280
-    imageHeight = 137
+    imageWidth = 160
+    imageHeight = 78
     imageTitle = "XiLAB3D+ : l'ingénierie agile"
 
     [[params.profileMode.buttons]]
@@ -126,3 +126,8 @@ enableInlineShortcodes = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block  = [["$$", "$$"]]
+        inline = [["$", "$"], ["\\(", "\\)"]]

@@ -6,29 +6,25 @@
         {{- if not (urls.Parse .imageUrl).IsAbs }}
             {{- $img = resources.Get .imageUrl }}
         {{- end }}
+
+        {{/* Logo au-dessus de la vidéo */}}
+        <div style="margin-bottom:0.6rem; margin-top:-2.5rem;">
         {{- if $img }}
-            {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-            {{- if hugo.IsExtended -}}
-                {{- $processableFormats = $processableFormats | append "webp" -}}
-            {{- end -}}
-            {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
-                    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
-                {{- else if .imageHeight }}
-                    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
-                {{ else if .imageWidth }}
-                    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
-                {{ else }}
-                    {{- $img = $img.Resize "150x150" }}
-                {{- end }}
-            {{- end }}
             <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+                style="width:40px; height:auto; display:block; margin:0 auto;" />
         {{- else }}
-        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+            <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                style="width:40px; height:auto; display:block; margin:0 auto;" />
         {{- end }}
+        </div>
+
+        {{/* Vidéo */}}
+        <div style="display:inline-block; width:320px; border-radius:6px; overflow:hidden; box-shadow:0 3px 14px rgba(0,0,0,0.18); margin-bottom:1rem;">
+          <video autoplay muted loop playsinline style="width:320px; display:block;">
+            <source src="/videos/Cinematic_Bionic_Bracket_Generation.mp4" type="video/mp4">
+          </video>
+        </div>
+
         {{- end }}
         <h1>{{ .title | default site.Title | markdownify }}</h1>
         <span>{{ .subtitle | markdownify }}</span>
@@ -54,7 +50,7 @@
         </div>
         {{- end }}
 
-        <div class="buttons" style="margin-top:12px;">
+        <div class="buttons" style="margin-top:12px; margin-bottom:-1.5rem;">
             <a class="button btn-move2digital" href="/move2digital">
                 <span class="button-inner">Diagnostic IA Move2Digital</span>
             </a>
