@@ -4,7 +4,7 @@ date: 2026-03-20
 description: "Comment piloter point par point la composition d'une pièce imprimée à partir du champ de contraintes ou de l'optimisation topologique — méthodologie, implémentation et résultats sur la poutre MBB."
 tags: ["R&D", "simulation", "optimisation topologique", "impression 3D", "multi-matériau", "SIMP", "éléments finis"]
 categories: ["rd"]
-draft: false
+draft: true
 math: true
 cover:
   image: "/images/xigrad/topo_final_3d.png"
