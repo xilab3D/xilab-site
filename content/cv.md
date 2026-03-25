@@ -1,7 +1,7 @@
 ---
 title: "Fiche de compétences — Nicolas Gardan"
 date: 2025-01-05
-description: "PhD / HDR | CEO XiLAB3D+ — Expert en Simulation Numérique, Jumeaux Numériques et Intelligence Artificielle appliquée à l'ingénierie"
+description: "PhD / HDR | CEO XiLAB3D+ — Expert en Simulation Numérique, Jumeaux Numériques et Fabrication Additive appliquée à l'ingénierie"
 ---
 
 <a href="/pdf/cv.pdf" class="blog-cat-btn" download>↓ Télécharger en PDF</a>
@@ -10,9 +10,9 @@ description: "PhD / HDR | CEO XiLAB3D+ — Expert en Simulation Numérique, Jume
 
 **PhD / HDR | CEO XiLAB3D+ — Jeune Entreprise Innovante en IA & Simulation Numérique & Fabrication Additive**
 
-ngardan@xilab.tech · [xilab.tech](https://xilab.tech) · [LinkedIn](https://www.linkedin.com/in/nicolas-gardan-19ba526/) · 06 73 28 43 14
+ngardan@xilab.tech · [xilab.tech](https://xilab.tech) · [Google Scholar](https://scholar.google.com/citations?hl=fr&user=uwqkmg0AAAAJ&view_op=list_works&sortby=pubdate) · [LinkedIn](https://www.linkedin.com/in/nicolas-gardan-19ba526/) · 06 73 28 43 14
 
-*Expert en Simulation Numérique / Jumeaux Numériques & IA appliquée à l'ingénierie*
+*Expert en Simulation Numérique, Jumeaux Numériques et Fabrication Additive appliquée à l'ingénierie*
 
 ---
 
@@ -44,25 +44,25 @@ ngardan@xilab.tech · [xilab.tech](https://xilab.tech) · [LinkedIn](https://www
 
 ## Domaines d'expertise
 
-**Intelligence Artificielle**
+**Modélisation de la connaissance appliquée à l'ingénierie**
 
-- Intelligence Artificielle Symbolique — Systèmes experts et raisonnement logique
+- Systèmes experts et raisonnement logique
 - Ontologies et graphes de connaissances
-- LLM pour l'ingénieur
-- Réseaux de neurones physiquement informés (PINNs), GNNs
+- Modélisation de la connaissance
+- Méthodologie d'intégration dans les TPE/PME
+
+**Chaîne Numérique et Simulation**
+
+- Modélisation 3D / modèles numériques 
+- Simulation numérique de phénomènes physiques (FEA / CFD) 
+- Intégration dans la chaîne numérique de conception et fabrication
+- Fabrication Additive : préparation des modèles CAO, simulation procédés SLM, gestion des matériaux et procédés 
 
 **Jumeaux Numériques et Phénomènes Physiques**
 
 - Développement de jumeaux numériques pour systèmes physiques complexes
 - Utilisation de la fabrication additive pour l'intégration des capteurs
-- Modélisation prédictive
-
-**Chaîne Numérique et Simulation**
-
-- Modélisation 3D / modèles numériques
-- Simulation numérique de phénomènes physiques (FEA / CFD)
-- Intégration dans la chaîne numérique de conception et fabrication
-- Fabrication Additive : préparation des modèles CAO, simulation procédés SLM, gestion des matériaux et procédés
+- Modélisation prédictive et IA frugale
 
 ---
 
@@ -72,17 +72,18 @@ ngardan@xilab.tech · [xilab.tech](https://xilab.tech) · [LinkedIn](https://www
 
 - Physics-Informed Neural Networks (PINNs) — intégration de contraintes physiques dans l'apprentissage
 - IA frugale / parcimonieuse notamment avec NeurEco d'Adagos (systèmes embarqués / faible empreinte computationnelle)
-- Graph Neural Networks (GNNs) — modélisation de systèmes complexes et relations entre composants
-- Analyse de séries temporelles et prédiction de comportements dynamiques / détection d'anomalies et compression de données capteurs 
+- Analyse de séries temporelles et prédiction de comportements dynamiques / détection d'anomalies et compression de données capteurs
+- Couplage avec la CFD 
 
 **Ingénierie et Simulation**
 
 - Utilisation des LLM appliquée à l'ingénierie
 - Développement de jumeaux numériques pour systèmes physiques complexes
-- Modélisation 3D / Optimisation numérique (appliquée à la Fabrication Additive)
+- Modélisation 3D / Optimisation numérique (applications dans CATIA V4/V5, Optistruct)
 - Acquisition et traitement de données de capteurs IoT
-- Simulation numérique FEA non linéaire, CFD
-- Intégration de la fabrication additive dans la chaîne numérique et production
+- Simulation numérique FEA non linéaire, CFD (applications dans Hypermesh/Optistruct, Patran/Marc, Salome-Meca, PreProMax, OpenFoam et SimericsMP+)
+- Intégration de la fabrication additive dans la chaîne numérique et production (applications dans 4D-Additive))
+- Développement de prototypes numérique en ingénierie en Python
 
 ---
 
@@ -92,3 +93,4 @@ ngardan@xilab.tech · [xilab.tech](https://xilab.tech) · [LinkedIn](https://www
 - Encadrement doctoral et direction de recherche
 - Collaboration industrielle et transfert technologique
 - Réalisation d'audits (expertise de plus de 15 ans auprès de Grands Groupes / PME / TPE) en ingénierie numérique (simulation, modélisation connaissance, IA)
+- Expert IA Move2Digital sur l'IA physique et les jumeaux numériques
