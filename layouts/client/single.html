@@ -1,0 +1,143 @@
+{{ define "main" }}
+<style>
+  .client-wrap { max-width: 480px; margin: 3rem auto; padding: 0 1rem; }
+  .client-card {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .client-card h2 { margin: 0 0 0.3rem; font-size: 1.2rem; }
+  .client-card p  { margin: 0 0 1.5rem; color: var(--secondary); font-size: 0.9rem; }
+  .client-field { margin-bottom: 1rem; }
+  .client-field label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .client-field input {
+    width: 100%; padding: 0.55rem 0.8rem;
+    border: 1px solid var(--border); border-radius: 5px;
+    background: var(--theme); color: var(--primary);
+    font-size: 0.95rem; box-sizing: border-box;
+  }
+  .client-field input:focus { outline: 2px solid #4a6fa5; }
+  .client-btn {
+    width: 100%; padding: 0.6rem;
+    background: #4a6fa5; color: #fff;
+    border: none; border-radius: 5px;
+    font-size: 0.95rem; font-weight: 600; cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  .client-btn:hover { background: #3a5f95; }
+  .client-error { color: #c0392b; font-size: 0.85rem; margin-top: 0.7rem; display: none; }
+
+  /* Contenu protégé */
+  .client-content { display: none; }
+  .client-content h2 { margin-top: 0; }
+  .client-links { list-style: none; padding: 0; margin: 1.2rem 0 0; }
+  .client-links li { margin-bottom: 0.8rem; }
+  .client-links a {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.7rem 1rem;
+    background: var(--entry); border: 1px solid var(--border);
+    border-radius: 6px; text-decoration: none; color: var(--primary);
+    font-size: 0.95rem; transition: border-color 0.15s;
+  }
+  .client-links a:hover { border-color: #4a6fa5; color: #4a6fa5; }
+  .client-links .link-icon { font-size: 1.2rem; }
+  .client-logout {
+    margin-top: 2rem; font-size: 0.8rem; color: var(--secondary);
+    cursor: pointer; text-decoration: underline; background: none; border: none;
+  }
+</style>
+
+<div class="client-wrap">
+
+  {{/* ── FORMULAIRE DE CONNEXION ── */}}
+  <div class="client-card" id="login-box">
+    <h2>🔒 Espace clients</h2>
+    <p>Accès réservé — identifiants fournis par XiLAB3D+</p>
+    <div class="client-field">
+      <label for="c-id">Identifiant</label>
+      <input type="text" id="c-id" autocomplete="username" placeholder="identifiant">
+    </div>
+    <div class="client-field">
+      <label for="c-pw">Mot de passe</label>
+      <input type="password" id="c-pw" autocomplete="current-password" placeholder="••••••••">
+    </div>
+    <button class="client-btn" onclick="doLogin()">Se connecter</button>
+    <div class="client-error" id="login-error">Identifiants incorrects.</div>
+  </div>
+
+  {{/* ── CONTENU PROTÉGÉ (caché jusqu'à auth) ── */}}
+  <div class="client-content client-card" id="client-area">
+    <h2>Bienvenue dans votre espace</h2>
+    <p style="color:var(--secondary); font-size:0.9rem;">Ressources mises à disposition par XiLAB3D+</p>
+    <ul class="client-links" id="client-links">
+      {{/* Les liens seront ajoutés ici */}}
+    </ul>
+    <br>
+    <button class="client-logout" onclick="doLogout()">Se déconnecter</button>
+  </div>
+
+</div>
+
+<script>
+// Hash SHA-256 de id+mdp (jamais stockés en clair)
+const EXPECTED = "0d4d7e40eaec2e4241e7c60dc2e63c130f575b0a990154700ad9599188f26334";
+const SESSION_KEY = "xilab_client_auth";
+
+// Liens protégés (injectés côté client seulement après auth)
+const LINKS = [
+  {
+    icon: "📓",
+    label: "Cours interactif XiLAB3D+ — Visualisation EF : Géométrie, Magnitude et Fonctions de Forme",
+    url: "https://xilab3d.github.io/xilab-notebooks/notebooks/index.html?path=MAIL_extrapol_simple.ipynb"
+  },
+];
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest("SHA-256",
+    new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf))
+    .map(b => b.toString(16).padStart(2,"0")).join("");
+}
+
+async function doLogin() {
+  const id = document.getElementById("c-id").value.trim();
+  const pw = document.getElementById("c-pw").value;
+  const hash = await sha256(id + pw);
+  if (hash === EXPECTED) {
+    sessionStorage.setItem(SESSION_KEY, "1");
+    showContent();
+  } else {
+    document.getElementById("login-error").style.display = "block";
+  }
+}
+
+function showContent() {
+  document.getElementById("login-box").style.display = "none";
+  const area = document.getElementById("client-area");
+  area.style.display = "block";
+  // Inject links
+  const ul = document.getElementById("client-links");
+  ul.innerHTML = LINKS.map(l =>
+    `<li><a href="${l.url}" target="_blank" rel="noopener">
+      <span class="link-icon">${l.icon}</span>${l.label}
+    </a></li>`
+  ).join("");
+}
+
+function doLogout() {
+  sessionStorage.removeItem(SESSION_KEY);
+  location.reload();
+}
+
+// Entrée par touche Enter
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter") doLogin();
+});
+
+// Vérification session active
+if (sessionStorage.getItem(SESSION_KEY) === "1") showContent();
+</script>
+
+{{ end }}
