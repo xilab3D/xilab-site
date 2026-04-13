@@ -82,7 +82,10 @@
 
 <script>
 // Hash SHA-256 de id+mdp (jamais stockés en clair)
-const EXPECTED = "0d4d7e40eaec2e4241e7c60dc2e63c130f575b0a990154700ad9599188f26334";
+const EXPECTED = [
+  "0d4d7e40eaec2e4241e7c60dc2e63c130f575b0a990154700ad9599188f26334",
+  "e016917331f2dc99aabcb7a215e0bc197f763f658f2f4252fdf56abf97c43eea"
+];
 const SESSION_KEY = "xilab_client_auth";
 
 // Liens protégés (injectés côté client seulement après auth)
@@ -110,7 +113,7 @@ async function doLogin() {
   const id = document.getElementById("c-id").value.trim();
   const pw = document.getElementById("c-pw").value;
   const hash = await sha256(id + pw);
-  if (hash === EXPECTED) {
+  if (EXPECTED.includes(hash)) {
     sessionStorage.setItem(SESSION_KEY, "1");
     showContent();
   } else {
