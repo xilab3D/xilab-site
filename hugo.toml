@@ -79,8 +79,9 @@ enableInlineShortcodes = true
     url = "https://www.linkedin.com/company/108783640/"
 
   [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/xilab3D"
+    name = "clients"
+    url = "/client/"
+    title = "Espace clients"
 
 [menu]
   [[menu.main]]
