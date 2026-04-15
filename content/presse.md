@@ -14,6 +14,8 @@ TocOpen: false
 
 ## On parle de nous / interventions
 
+- **[01/05/26]** : Intervenant au symposium [NRTW2026](https://www.cff-fiabilite.fr/symposium-nrtw/) à Grenoble *Fiabilité électronique et photonique : Évaluer, prédire, maîtriser* — présentation "Fiabilité prédictive des composants électroniques : vers une IA parcimonieuse et robuste appliquée aux données industrielles"
+
 - **[13/03/26]** : Intervenant au [WebTech AKTANTIS](https://www.aktantis.com/2026/01/23/webtech-donnees-ia-jeux-olympique-paralympique-hiver-2030/) — *Données & IA en vue des JO d'hiver 2030* — présentation "L'intelligence prédictive frugale pour les infrastructures et équipements de montagne"
 
 - **[03/02/26]** : Intervenant à la 22e édition du [Forum International OCOVA](https://www.ocova.eu/) "Montagne de Demain" aux Orres (Hautes-Alpes) — session sur les jumeaux numériques locaux pour la gestion et la transition écologique des territoires de montagne — [Forum OCOVA](https://www.ocova.eu/accueil/programme-2026/) · [article mesinfos.fr](https://mesinfos.fr/05200-les-orres/les-orres-quel-est-le-programme-de-la-22e-edition-d-ocova-238460.html)
