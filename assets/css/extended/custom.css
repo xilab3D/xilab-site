@@ -516,6 +516,27 @@ h1, h2, h3 {
   color: #fff;
 }
 
+/* Bouton Plaquette bleu */
+.btn-plaquette {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 8px 22px;
+  border: 2px solid #4a6fa5;
+  border-radius: var(--radius);
+  background: transparent;
+  color: #4a6fa5;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-plaquette:hover {
+  background: #4a6fa5;
+  color: #fff;
+}
+
 /* --- Footer --- */
 .footer {
   font-size: 13px;
