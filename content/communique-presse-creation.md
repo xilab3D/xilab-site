@@ -99,5 +99,5 @@ XiLAB3D+ intervient sur l'ensemble de la chaîne numérique du produit :
 *Ce communiqué peut être librement reproduit avec mention de la source XiLAB3D+.*
 
 **Contact presse**<br>
-Nicolas Gardan — [ngardan@xilab.tech](mailto:ngardan@xilab.tech) — 06 73 28 43 14<br>
+Nicolas Gardan — [contact@xilab.tech](mailto:contact@xilab.tech) — 06 73 28 43 14<br>
 XiLAB3D+ · 1 rue des cordeliers, 04200 Sisteron · [xilab.tech](https://xilab.tech)
