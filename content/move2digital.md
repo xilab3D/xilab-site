@@ -76,4 +76,4 @@ Nous réalisons une présentation des résultats de l'audit avec un moment d'éc
 
 → [Prendre contact](/contact)
 
-*ou directement :* contact@xilab.tech · 06 73 28 43 14
+*ou directement :* contact@xilab3dplus.com · 06 73 28 43 14
