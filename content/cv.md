@@ -10,7 +10,7 @@ description: "PhD / HDR | CEO XiLAB3D+ — Expert en Simulation Numérique, Jume
 
 **PhD / HDR | CEO XiLAB3D+ — Jeune Entreprise Innovante en IA & Simulation Numérique & Fabrication Additive**
 
-ngardan@xilab.tech · [xilab.tech](https://xilab.tech) · [Google Scholar](https://scholar.google.com/citations?hl=fr&user=uwqkmg0AAAAJ&view_op=list_works&sortby=pubdate) · [LinkedIn](https://www.linkedin.com/in/nicolas-gardan-19ba526/) · 06 73 28 43 14
+contact@xilab3dplus.com · [xilab.tech](https://xilab.tech) · [Google Scholar](https://scholar.google.com/citations?hl=fr&user=uwqkmg0AAAAJ&view_op=list_works&sortby=pubdate) · [LinkedIn](https://www.linkedin.com/in/nicolas-gardan-19ba526/) · 06 73 28 43 14
 
 *Expert en Simulation Numérique, Jumeaux Numériques et Fabrication Additive appliquée à l'ingénierie*
 
