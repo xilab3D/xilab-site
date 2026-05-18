@@ -23,6 +23,14 @@ Ce procédé repose sur trois piliers :
 
 ---
 
+## Résultats & expérimentations R&D
+
+Retrouvez nos notes techniques, expérimentations et résultats intermédiaires issus du programme AINUM-e et de nos axes de recherche.
+
+→ [Accéder aux résultats & expérimentations](/resultats-rd/)
+
+---
+
 ## Cas d'usage : simulation CFD d'une fuite d'hydrogène
 
 Notre premier démonstrateur porte sur la simulation de fuite d'hydrogène dans un contexte aéronautique, intégrant des modèles thermiques, de compressibilité et de turbulence. Résultat concret : le temps de calcul, initialement de **5 jours de calcul**, a été drastiquement réduit grâce au couplage avec un RNN parcimonieux, NeurEco, tout en maintenant la précision physique des résultats.
