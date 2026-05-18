@@ -8,6 +8,6 @@ Notes techniques et résultats issus du programme de R&D AINUM-e et des axes de 
 
 ---
 
-<!-- Ajouter les liens vers les fiches ci-dessous -->
+- [Étude éléments finis paramétrique d'une cornière (L-bracket) sous CalculiX — front de Pareto masse / contrainte](/resultats-rd/lbracket-pareto/)
 
 → [Retour R&D](/rd/)
