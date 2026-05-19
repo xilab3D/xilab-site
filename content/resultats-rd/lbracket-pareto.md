@@ -1,7 +1,7 @@
 ---
 title: "Étude éléments finis paramétrique d'une cornière (L-bracket) sous CalculiX, avec balayage de 50 designs et identification d'un front de Pareto masse / contrainte"
 description: "Étude paramétrique FEM d'un L-bracket en acier S235 — Latin Hypercube Sampling, 50 designs, front de Pareto masse / contrainte de Von Mises — XiLAB3D+"
-date: 2025-01-01
+date: 2026-05-19
 math: true
 ShowToc: true
 TocOpen: false
@@ -246,6 +246,11 @@ Scripts Python du projet :
 Versions logicielles utilisées : CalculiX 2.23, gmsh 4.15.1,
 ccx2paraview, meshio 5.3.5, numpy 2.1, scipy 1.17, pandas 2.3,
 matplotlib 3.10, pyvista 0.47.
+
+**Accès aux 50 cas tests** — l'intégralité des fichiers d'entrée et
+de sortie (`.inp` CalculiX, `.frd` résultats binaires, `.vtu` pour
+ParaView) est mise à disposition sur Google Drive :
+[Télécharger l'archive (50 cas)](https://drive.google.com/file/d/1wNusJc_AE2e0bbkhSZiOzS3ueYdR4I9P/view?usp=sharing).
 
 ---
 
