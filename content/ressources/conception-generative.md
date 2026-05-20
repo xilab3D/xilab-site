@@ -1,5 +1,5 @@
 ---
-title: "Conception générative : poser le problème plutôt que dessiner la solution"
+title: "Conception générative : état de lieux et expérimentations"
 description: "Synthèse du rapport de recherche XiLAB sur la conception générative appliquée à la modélisation 3D — définitions, architecture système, méthodes de résolution, visualisation des solutions."
 date: 2026-05-20
 ref: RAP_25_001
@@ -9,22 +9,9 @@ ShowToc: true
 TocOpen: false
 ---
 
-# Conception générative : poser le problème plutôt que dessiner la solution
-
 Synthèse du rapport de recherche **RAP_25_001** — un panorama des concepts et outils de la conception générative appliquée à la modélisation 3D, à destination des PME et des équipes de conception.
 
-20 mai 2026
-
-**Table des matières**
-
-- [1. De quoi parle-t-on ?](#1-de-quoi-parle-t-on-)
-- [2. Ce qu'on en attend (et ce qu'il faut savoir)](#2-ce-quon-en-attend-et-ce-quil-faut-savoir)
-- [3. Architecture d'un système génératif](#3-architecture-dun-systeme-generatif)
-- [4. Spécifier le problème : trois voies](#4-specifier-le-probleme--trois-voies)
-- [5. Résoudre : exécuter ou rechercher](#5-resoudre--executer-ou-rechercher)
-- [6. Choisir parmi N solutions](#6-choisir-parmi-n-solutions)
-- [7. Optimisation de formes : paramétrique, géométrique, topologique](#7-optimisation-de-formes--parametrique-geometrique-topologique)
-- [Pour aller plus loin](#pour-aller-plus-loin)
+*N. Gardan — mai 2026*
 
 ---
 
