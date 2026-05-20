@@ -5,6 +5,7 @@ date: 2026-05-19
 math: true
 ShowToc: true
 TocOpen: false
+ressource_type: "experimentations"
 ---
 
 **XiLAB3dplus — Étude exploratoire**

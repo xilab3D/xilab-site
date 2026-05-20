@@ -27,7 +27,7 @@ Ce procédé repose sur trois piliers :
 
 Retrouvez nos notes techniques, expérimentations et résultats intermédiaires issus du programme AINUM-e et de nos axes de recherche.
 
-→ [Accéder aux résultats & expérimentations](/resultats-rd/)
+→ [Accéder aux expérimentations R&D](/ressources/#experimentations)
 
 ---
 

@@ -1,0 +1,83 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{- with .Description }}<p class="post-description">{{ . }}</p>{{- end }}
+  </header>
+
+  <div class="blog-categories">
+    <a href="#experimentations" class="blog-cat-btn">Expérimentations</a>
+    <a href="#rapports" class="blog-cat-btn">Rapports de Recherche</a>
+  </div>
+
+  <div class="post-content">
+
+    <h2 id="experimentations">Expérimentations</h2>
+    <ul class="ressource-list">
+      <li>
+        <span class="ressource-id">[EXP_25_001]</span>
+        <span class="ressource-title"><a href="/ressources/lbracket-pareto/">Étude éléments finis paramétrique d'une cornière (L-bracket) sous CalculiX</a></span>
+        <button class="rapport-btn indisponible" data-id="EXP_25_001">Accès au rapport complet</button>
+      </li>
+      <li>
+        <span class="ressource-id">[EXP_25_002]</span>
+        <span class="ressource-title"><a href="/ressources/topix-optimisation-topologique/">TopiX : optimisation topologique open-source couplée à CalculiX</a></span>
+        <button class="rapport-btn indisponible" data-id="EXP_25_002">Accès au rapport complet</button>
+      </li>
+    </ul>
+
+    <h2 id="rapports">Rapports de Recherche</h2>
+    <ul class="ressource-list">
+      <li>
+        <span class="ressource-id">[RAP_24_001]</span>
+        <span class="ressource-title"><a href="/ressources/ainum-jei/">AINUM-e : notre programme R&amp;D et le statut Jeune Entreprise Innovante</a></span>
+        <button class="rapport-btn indisponible" data-id="RAP_24_001">Accès au rapport complet</button>
+      </li>
+      <li>
+        <span class="ressource-id">[RAP_24_002]</span>
+        <span class="ressource-title">Allégement et fonctionnalisation de pièce en fabrication additive</span>
+        <button class="rapport-btn indisponible" data-id="RAP_24_002">Accès au rapport complet</button>
+      </li>
+      <li>
+        <span class="ressource-id">[RAP_25_001]</span>
+        <span class="ressource-title">La conception générative</span>
+        <button class="rapport-btn indisponible" data-id="RAP_25_001">Accès au rapport complet</button>
+      </li>
+      <li>
+        <span class="ressource-id">[RAP_25_002]</span>
+        <span class="ressource-title">Signature Graphonumérique : approche neuro-symbolique pour les Jumeaux Numériques</span>
+        <button class="rapport-btn indisponible" data-id="RAP_25_002">Accès au rapport complet</button>
+      </li>
+    </ul>
+
+  </div>
+</article>
+
+<script>
+// Codes et URLs des rapports — à remplir au fur et à mesure
+// format : "ID": { code: "CODE_SECRET", url: "https://..." }
+const RAPPORTS = {
+  "EXP_25_001": { code: "", url: "" },
+  "EXP_25_002": { code: "", url: "" },
+  "RAP_24_001": { code: "", url: "" },
+  "RAP_24_002": { code: "", url: "" },
+  "RAP_25_001": { code: "", url: "" },
+  "RAP_25_002": { code: "", url: "" },
+};
+
+document.querySelectorAll('.rapport-btn:not(.indisponible)').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const id = this.dataset.id;
+    const entry = RAPPORTS[id];
+    if (!entry || !entry.code) return;
+    const input = prompt("Code d'accès pour " + id + " :");
+    if (input === null) return;
+    if (input.trim() === entry.code) {
+      window.open(entry.url, '_blank');
+    } else {
+      alert("Code incorrect. Contactez-nous via le formulaire pour obtenir votre accès.");
+    }
+  });
+});
+</script>
+{{ end }}

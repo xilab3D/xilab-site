@@ -537,6 +537,72 @@ h1, h2, h3 {
   color: #fff;
 }
 
+/* --- Ressources : liste et bouton rapport --- */
+.ressource-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.ressource-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+
+.ressource-list li:last-child {
+  border-bottom: none;
+}
+
+.ressource-id {
+  font-weight: 700;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  color: #4a6fa5;
+  white-space: nowrap;
+}
+
+.ressource-title {
+  flex: 1;
+  min-width: 200px;
+}
+
+.rapport-btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border: 1px solid #4a6fa5;
+  border-radius: var(--radius);
+  background: transparent;
+  color: #4a6fa5;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.rapport-btn:hover {
+  background: #4a6fa5;
+  color: #fff;
+}
+
+.rapport-btn.indisponible {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  cursor: default;
+}
+
+.rapport-btn.indisponible:hover {
+  background: transparent;
+  color: var(--secondary);
+}
+
 /* --- Footer --- */
 .footer {
   font-size: 13px;
