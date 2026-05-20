@@ -1,7 +1,7 @@
 ---
 title: "Signature Graphonumérique : relier l'intention humaine au calcul physique"
 description: "Synthèse pédagogique de l'article XiLAB sur la Signature Graphonumérique — une approche neuro-symbolique pour assurer la traçabilité des données dans les Jumeaux Numériques (LLM + PINNs)."
-date: 2026-05-20
+date: 2025-06-20
 ref: RAP_25_002
 author: N. Gardan
 ressource_type: "rapports"
@@ -13,29 +13,15 @@ TocOpen: false
 
 Synthèse de l'article **Signature Graphonumérique : approche neuro-symbolique pour les Jumeaux Numériques** — un cadre méthodologique pour passer du langage naturel à des contraintes physiques rigoureuses, et garantir la traçabilité du couplage essai/simulation.
 
-20 mai 2026
-
-**Table des matières**
-
-- [1. Le problème : un Jumeau Numérique sans mémoire sémantique](#1-le-probleme--un-jumeau-numerique-sans-memoire-semantique)
-- [2. Trois concepts pour structurer la continuité numérique](#2-trois-concepts-pour-structurer-la-continuite-numerique)
-- [3. L'architecture du couplage : LLM + PINN](#3-larchitecture-du-couplage--llm--pinn)
-- [4. Le cadre mathématique en bref](#4-le-cadre-mathematique-en-bref)
-- [5. L'incertitude spatiale : le noyau d'intégration](#5-lincertitude-spatiale--le-noyau-dintegration)
-- [6. La signature cryptographique : sceller la donnée](#6-la-signature-cryptographique--sceller-la-donnee)
-- [7. Cas d'usage : l'échangeur de chaleur](#7-cas-dusage--lechangeur-de-chaleur)
-- [8. Implémentation prototype](#8-implementation-prototype)
-- [Pour aller plus loin](#pour-aller-plus-loin)
-
 ---
 
 ## 1. Le problème : un Jumeau Numérique sans mémoire sémantique
 
 Le Jumeau Numérique repose sur la synchronisation entre un système physique réel et sa représentation virtuelle. Mais dans la pratique, **la définition sémantique des capteurs — leur intention, leur positionnement, leur fonction — est souvent déconnectée du modèle de calcul**.
 
-Un thermocouple posé sur un échangeur produit une valeur numérique. Cette valeur est utilisée par la simulation. Mais qui sait *où* le capteur était exactement, *pourquoi* l'ingénieur d'essai l'a placé là, avec quelle *incertitude de position* ? Cette information vit dans un cahier de manip, dans une tête, dans un mail. Pas dans le modèle.
+Un thermocouple posé sur un échangeur produit une valeur numérique. Cette valeur est utilisée par la simulation. Mais qui sait *où* le capteur était exactement, *pourquoi* l'ingénieur d'essai l'a placé là, avec quelle *incertitude de position* ? 
 
-L'article propose une architecture **neuro-symbolique** — hybridation entre l'IA symbolique (sémantique) et l'IA connexionniste (numérique) — appliquée au Jumeau Numérique. L'objectif : coupler la maquette physique avec la maquette numérique **et** assurer une traçabilité complète des données.
+Nous proposons une architecture **neuro-symbolique** — hybridation entre l'IA symbolique (sémantique) et l'IA connexionniste (numérique) — appliquée au Jumeau Numérique. Notre objectif est de coupler la maquette physique avec la maquette numérique **et** assurer une traçabilité complète des données.
 
 ---
 
@@ -45,7 +31,7 @@ Le modèle s'appuie sur trois objets qui correspondent à trois étapes de trans
 
 **L'Expression Graphonumérique (EGN)** est la représentation de l'intention de l'utilisateur **en langage naturel**. Non structurée, sémantiquement riche, elle porte le contexte métier. Exemple : *« Je veux mesurer la température moyenne près de la sortie du fluide, avec une incertitude de position de 5 mm. »* C'est l'interface homme-machine intuitive.
 
-**Le Paramètre Graphonumérique (PGN)** est la **projection structurée** de l'EGN : un objet informatique (vecteur ou graphe) interprétable par une machine, contenant les instructions géométriques, physiques et dimensionnelles. Concrètement, un objet JSON avec coordonnées, type de noyau d'intégration et unités. Il sert de condition aux limites pour le modèle numérique.
+**Le Paramètre Graphonumérique (PGN)** est la **projection structurée** de l'EGN : un objet informatique (vecteur ou graphe) interprétable par une machine, contenant les instructions géométriques, physiques et dimensionnelles. D'un point de vue informatique c'est un objet JSON avec coordonnées, type de noyau d'intégration et unités. Il sert de condition aux limites pour le modèle numérique.
 
 **La Signature Graphonumérique (Σ)** est l'objet **immuable et traçable** qui lie une valeur mesurée à son contexte de définition (le PGN) à un instant *t*. Elle garantit que la donnée n'est pas orpheline : une valeur numérique ne peut exister sans la définition de son capteur. Elle sert à la fois de preuve cryptographique et de point d'ancrage pour l'entraînement du modèle physique.
 
@@ -55,7 +41,7 @@ Le modèle s'appuie sur trois objets qui correspondent à trois étapes de trans
 
 ## 3. L'architecture du couplage : LLM + PINN
 
-Le flux méthodologique se décompose en deux étapes critiques.
+Le flux méthodologique se décompose en deux étapes :
 
 **Étape 1 — L'Interpréteur (LLM local).** Le LLM reçoit l'EGN. Son rôle est *déterministe* : il ne doit pas « inventer » d'information mais **extraire** des paramètres structurés à partir du langage naturel. Une phrase comme « capteur pression en tête de cylindre » devient un JSON `{type: "pressure", loc: "cyl_head_v1", coords: [x1,y1,z1]}`.
 
@@ -76,9 +62,9 @@ Le processus traverse **quatre couches d'abstraction** :
 
 ## 4. Le cadre mathématique en bref
 
-Pour formaliser le modèle, l'article définit plusieurs espaces : ℒ pour le langage naturel, 𝒟 ⊂ ℝ³ × ℝ⁺ pour le domaine spatio-temporel, 𝒱 pour les valeurs physiques.
+Pour formaliser le modèle, le modèle définit plusieurs espaces : ℒ pour le langage naturel, 𝒟 ⊂ ℝ³ × ℝ⁺ pour le domaine spatio-temporel, 𝒱 pour les valeurs physiques.
 
-Un point central : **garantir l'homogénéité dimensionnelle**. L'article utilise un espace ℝ⁷ correspondant aux **7 unités de base du Système International** (mètre, kilogramme, seconde, ampère, kelvin, mole, candela). Chaque PGN porte ainsi un vecteur de dimensions qui empêche, par construction, de mélanger une température avec une vitesse.
+Un point central : **garantir l'homogénéité dimensionnelle**. Le modèle utilise un espace ℝ⁷ correspondant aux **7 unités de base du Système International**. Chaque PGN porte ainsi un vecteur de dimensions qui empêche, par construction, de mélanger une température avec une vitesse.
 
 Le LLM agit alors comme une **fonction de transformation Φ** :
 
@@ -104,7 +90,7 @@ Le noyau K (gaussien, sphérique, etc.) est dérivé du langage naturel : « 5 m
 
 La Signature Σ n'est pas seulement la valeur mesurée. C'est le **couplage de la définition (PGN) et de la mesure**, scellé par hachage.
 
-L'article construit d'abord un **graphe RDF** (triplets sémantiques) qui décrit la mesure : identifiant du capteur, valeur, instant, noyau utilisé. Ce graphe est ensuite haché cryptographiquement (typiquement SHA-256) :
+Le modèle construit d'abord un **graphe RDF** (triplets sémantiques) qui décrit la mesure : identifiant du capteur, valeur, instant, noyau utilisé. Ce graphe est ensuite haché cryptographiquement (typiquement SHA-256) :
 
 > Σ = Hash(G<sub>RDF</sub>)
 
@@ -141,20 +127,20 @@ Le vecteur de dimensions `[0,0,0,0,1,0,0]` indique sans ambiguïté qu'il s'agit
 
 > Σ = SHA256({ ID: "Tc_Sortie", Kernel: K<sub>Gauss</sub>, Val: 353.15 })
 
-Ce scellé est stocké pour la traçabilité, et les données sont ensuite préparées pour le moteur d'IA parcimonieuse **NeurEco (ADAGOS)**, qui assurera l'entraînement du modèle réduit.
+Ce scellé est stocké pour la traçabilité, et les données sont ensuite préparées pour le moteur d'IA physique, qui assurera l'entraînement du modèle réduit.
 
 ---
 
 ## 8. Implémentation prototype
 
-L'article propose une architecture en couches avec des technologies recommandées :
+Un prototype a été développé pour vérifier les concepts proposés :
 
 - **Couche sémantique** — LLM local via *Ollama* (Mistral) + *LangChain* pour structurer le prompt.
 - **Couche structurelle** — *Pydantic* pour forcer le format des données (validation stricte des PGN).
 - **Couche signature** — *Hashlib* (SHA-256 standard Python).
 - **Couche physique** — *DeepXDE* (framework PINN) ou PyTorch pur, en attendant l'intégration NeurEco.
 
-Le dossier prototype s'organise autour d'un `ledger.json` jouant le rôle de « blockchain » locale, et de modules séparés pour l'interpréteur LLM, la signature, et la couche physique. Une interface web permet à l'ingénieur de saisir ses EGN et de visualiser les Signatures émises.
+Le prototype s'organise autour d'un « blockchain » locale, et de modules séparés pour l'interpréteur LLM, la signature, et la couche physique. Une interface web permet à l'ingénieur de saisir ses EGN et de visualiser les Signatures émises.
 
 ---
 
@@ -164,8 +150,7 @@ Cette synthèse ne couvre qu'une partie de l'article. Le document complet approf
 
 - la **formulation mathématique complète** des fonctions de perte composites,
 - la **sélection automatique de l'opérateur différentiel** par analyse sémantique (chaleur, fluides, mécanique),
-- le rôle de **régularisateur sémantique** joué par l'équation différentielle dans le PINN,
-- l'**intégration avec NeurEco (ADAGOS)** pour le moteur d'IA parcimonieuse.
+- le rôle de **régularisateur sémantique** joué par l'équation différentielle dans le PINN.
 
 > Document distribué à titre confidentiel. → Demander l'accès auprès de XiLAB.
 
