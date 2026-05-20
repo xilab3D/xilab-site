@@ -41,7 +41,7 @@
       <li>
         <span class="ressource-id">[RAP_25_001]</span>
         <span class="ressource-title"><a href="/ressources/conception-generative/">Conception générative : état de lieux et expérimentations</a></span>
-        <button class="rapport-btn indisponible" data-id="RAP_25_001">Accès au rapport complet</button>
+        <button class="rapport-btn" data-id="RAP_25_001">Accès au rapport complet</button>
       </li>
       <li>
         <span class="ressource-id">[RAP_25_002]</span>
@@ -53,31 +53,85 @@
   </div>
 </article>
 
+<!-- Modal accès rapport -->
+<div id="rapport-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
+  <div style="background:var(--theme); border:1px solid var(--border); border-radius:8px; padding:2rem 2.5rem; max-width:420px; width:90%; box-shadow:0 4px 24px rgba(0,0,0,0.2);">
+    <p style="margin:0 0 0.5rem; font-size:0.9rem; color:var(--secondary);">
+      Demandez le code à XiLAB3D+ en passant par le
+      <a href="/contact/" style="color:#4a6fa5;">formulaire de contact</a>.
+    </p>
+    <div style="margin:1rem 0;">
+      <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.4rem;">Code d'accès</label>
+      <input id="rapport-code-input" type="password" placeholder="••••••••"
+        style="width:100%; padding:0.5rem 0.8rem; border:1px solid var(--border); border-radius:5px;
+               background:var(--entry); color:var(--primary); font-size:0.95rem; box-sizing:border-box;">
+    </div>
+    <div id="rapport-error" style="color:#c0392b; font-size:0.82rem; margin-bottom:0.8rem; display:none;">Code incorrect.</div>
+    <div style="display:flex; gap:10px; justify-content:flex-end;">
+      <button onclick="fermerModal()"
+        style="padding:0.45rem 1rem; border:1px solid var(--border); border-radius:5px;
+               background:transparent; color:var(--primary); cursor:pointer; font-size:0.9rem;">Annuler</button>
+      <button onclick="validerCode()"
+        style="padding:0.45rem 1rem; border:none; border-radius:5px;
+               background:#4a6fa5; color:#fff; cursor:pointer; font-size:0.9rem; font-weight:600;">Accéder</button>
+    </div>
+  </div>
+</div>
+
 <script>
-// Codes et URLs des rapports — à remplir au fur et à mesure
-// format : "ID": { code: "CODE_SECRET", url: "https://..." }
+// Hashes SHA-256 des codes (jamais en clair) + URLs des rapports
 const RAPPORTS = {
-  "EXP_25_001": { code: "", url: "" },
-  "EXP_25_002": { code: "", url: "" },
-  "RAP_24_001": { code: "", url: "" },
-  "RAP_24_002": { code: "", url: "" },
-  "RAP_25_001": { code: "", url: "" },
-  "RAP_25_002": { code: "", url: "" },
+  "RAP_25_001": {
+    hash: "7243f150d9fe52ee4f450d449530568a05b3a451218f1e05c9c7f0c879140e21",
+    url:  "https://drive.google.com/file/d/1E1bVVRbHfKXN8NEfI7U5JVIYZR6CPSGo/view?usp=sharing"
+  },
 };
+
+let currentId = null;
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,"0")).join("");
+}
 
 document.querySelectorAll('.rapport-btn:not(.indisponible)').forEach(btn => {
   btn.addEventListener('click', function () {
-    const id = this.dataset.id;
-    const entry = RAPPORTS[id];
-    if (!entry || !entry.code) return;
-    const input = prompt("Code d'accès pour " + id + " :");
-    if (input === null) return;
-    if (input.trim() === entry.code) {
-      window.open(entry.url, '_blank');
-    } else {
-      alert("Code incorrect. Contactez-nous via le formulaire pour obtenir votre accès.");
-    }
+    currentId = this.dataset.id;
+    document.getElementById('rapport-code-input').value = '';
+    document.getElementById('rapport-error').style.display = 'none';
+    const modal = document.getElementById('rapport-modal');
+    modal.style.display = 'flex';
+    setTimeout(() => document.getElementById('rapport-code-input').focus(), 50);
   });
+});
+
+document.getElementById('rapport-code-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') validerCode();
+  if (e.key === 'Escape') fermerModal();
+});
+
+async function validerCode() {
+  const input = document.getElementById('rapport-code-input').value.trim();
+  const entry = RAPPORTS[currentId];
+  if (!entry) return;
+  const h = await sha256(input);
+  if (h === entry.hash) {
+    fermerModal();
+    window.open(entry.url, '_blank');
+  } else {
+    document.getElementById('rapport-error').style.display = 'block';
+    document.getElementById('rapport-code-input').value = '';
+    document.getElementById('rapport-code-input').focus();
+  }
+}
+
+function fermerModal() {
+  document.getElementById('rapport-modal').style.display = 'none';
+  currentId = null;
+}
+
+document.getElementById('rapport-modal').addEventListener('click', function(e) {
+  if (e.target === this) fermerModal();
 });
 </script>
 {{ end }}
