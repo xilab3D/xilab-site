@@ -1,6 +1,6 @@
 ---
 title: "TopiX : optimisation topologique couplée à CalculiX"
-date: 2025-05-18
+date: 2026-05-18
 description: "Comment nous avons développé TopiX, un outil Python d'optimisation topologique par éléments finis, et ce que donne la méthode SIMP sur le cas classique de la poutre cantilever."
 tags: ["R&D", "éléments finis", "optimisation topologique", "CalculiX", "Python"]
 categories: ["rd"]
@@ -107,7 +107,7 @@ L'outil est disponible sur demande. Pour toute question ou collaboration : [ngar
 
 ---
 
-*XiLAB3D+ — R&D · Mai 2025*
+*XiLAB3D+ — R&D · Mai 2026*
 
 ---
 
