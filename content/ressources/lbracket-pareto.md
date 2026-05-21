@@ -9,8 +9,10 @@ ressource_type: "experimentations"
 ---
 
 **XiLAB3dplus — Étude exploratoire**
-Étude éléments finis paramétrique d'une cornière (L-bracket) sous CalculiX,
-avec balayage de 50 designs et identification d'un front de Pareto
+
+Le document peut comporter des erreurs : n'hésitez pas à nous contacter
+
+Étude éléments finis paramétrique d'une cornière (L-bracket) sous CalculiX, automatisation de la chaîne du maillage à l'analyse, avec balayage de 50 designs et identification d'un front de Pareto
 masse / contrainte.
 
 ---
@@ -48,9 +50,9 @@ Matériau : **acier S235**
 - E = 210 000 MPa
 - ν = 0.3
 - ρ = 7.85 × 10⁻⁹ t/mm³
-- Re = 235 MPa (limite d'élasticité — tracée en pointillé sur les graphes)
+- Re = 235 MPa
 
-Unités de travail : **mm, N, MPa, t** (tonnes).
+Unités de travail : **mm, N, MPa, t**.
 
 ---
 
@@ -63,7 +65,7 @@ Unités de travail : **mm, N, MPa, t** (tonnes).
   l'aile horizontale (`x = L`).
 
 Le total de l'effort est constant entre designs ; seules les dimensions
-varient. La comparaison de contraintes entre designs est donc équitable.
+varient. 
 
 ---
 
@@ -87,10 +89,9 @@ de déformation par élément, voir [5]).
 | L=100, W=40, t=6  | 89 k  | 56 k  | 2.9 |
 | L=150, W=60, t=10 | 76 k  | 48 k  | 3.1 |
 
-Note permutation Tet10 : les nœuds 9 et 10 sont
-permutés entre la convention gmsh (MSH) et la convention Abaqus / CalculiX
-C3D10. Cette permutation est appliquée à l'écriture du `.inp`, vérifiée
-par comparaison avec le writer Abaqus natif de gmsh.
+Note permutation Tet10 dans le passage Gmsh > Calculix : les nœuds 9 et 10 sont
+permutés entre la convention gmsh  et la convention CalculiX
+C3D10. Cette permutation est appliquée à l'écriture du `.inp`.
 
 Visualisation des 50 maillages générés de manière automatique grâce à un
 script Python (ordre de calcul ; cadre rouge = front de Pareto) :
@@ -98,7 +99,7 @@ script Python (ordre de calcul ; cadre rouge = front de Pareto) :
 ![Maillages 3D des 50 designs](/images/lbracket-pareto/meshes_3d_grid.png)
 
 On observe que les cas à faible épaisseur (`t = 3 mm`) sont sensiblement
-plus densément maillés (jusqu'à 130 k éléments) que les cas épais
+plus densément maillés (jusqu'à 130 k éléments) que les cas plus épais
 (`t = 10 mm`, ~25 k éléments) : la contrainte `h ≤ t/3` impose une
 taille de maille proportionnelle à l'épaisseur.
 
@@ -106,8 +107,7 @@ taille de maille proportionnelle à l'épaisseur.
 
 ## 5. Solveur
 
-**CalculiX 2.23** [1] en analyse linéaire statique. Solveur direct SPOOLES,
-**mono-thread**.
+**CalculiX 2.23** [1] en analyse linéaire statique. Solveur direct SPOOLES.
 
 Sorties par cas :
 - `model.frd` — résultats binaires CalculiX (relisibles par CGX)
@@ -123,14 +123,14 @@ masse 0.40 kg, σ_max = 86 MPa) :
 ![Champ von Mises — cas 008](/images/lbracket-pareto/stress_case_008.png)
 
 La concentration de contrainte se localise nettement le long du congé
-intérieur ; ailleurs le matériau est très peu sollicité.
+intérieur ; ailleurs la pièçe est très peu sollicité.
 
-Sur un design **léger et fin** (case 047 : L=102, W=33, t=3.2, masse
-0.16 kg, σ_max = 2265 MPa, **u_tip = 17 mm**) :
+Sur un design **plus fin** (case 047 : L=102, W=33, t=3.2, masse
+0.16 kg, σ_max = 2265 MPa, **u = 17 mm**) :
 
 ![Champ von Mises — cas 047](/images/lbracket-pareto/stress_case_047.png)
 
-La pièce flèche fortement (déformation tracée à l'échelle réelle ×1),
+La pièce a une flèche élevée (déformation tracée à l'échelle réelle ×1),
 et la contrainte au congé dépasse largement la limite élastique de
 l'acier. Ce design serait inutilisable en pratique — il sert ici à
 borner le domaine d'étude.
@@ -186,18 +186,18 @@ chaque pièce colorée par σ_vM sur échelle logarithmique commune :
 | 008  | 57.8   | 57.1   | 8.23   | 0.399      | 86         | 0.08   |
 | 009  | 60.8   | 59.7   | 9.30   | 0.493      | 67         | 0.06   |
 
-**Lecture** :
+**Analyse rapide** :
 
-- Le front est convexe, décroissant : tout gain en masse coûte en
+- Le front est décroissant : tout gain en masse coûte en
   contrainte et inversement [11].
 
 - Pour rester sous la limite d'élasticité S235 (235 MPa), il faut une
-  masse d'au moins ~0.24 kg (case 015).
+  masse d'au moins ~0.24 kg (voir le cas 15 - lien de téléchargement ci-dessous).
 
-- Tous les designs du front ont L ≤ 70 mm — les "ailes" longues sont
+- Tous les designs du front ont L ≤ 70 mm — les parties longues sont
   systématiquement dominées dans cette gamme de charge.
 
-- Les designs lourds hors-front (>0.6 kg) sont **dominés** : pénalité
+- Les designs lourds en masse (>0.6 kg) sont **dominés** : pénalité
   de masse sans bénéfice en contrainte → à éviter.
 
 ---
@@ -209,7 +209,7 @@ chaque pièce colorée par σ_vM sur échelle logarithmique commune :
 Sur chaque panneau, on a tracé la régression log-log
 `log σ ~ log(paramètre)` avec sa pente et son coefficient de
 corrélation `R`. Plus la droite est raide (|pente|) **et** plus
-les points y collent (|R| → 1), plus le paramètre est dominant.
+les points collent (|R| → 1), plus le paramètre est dominant.
 
 | Paramètre | Pente | R | Lecture |
 |-----------|----------------:|---:|---------|
@@ -240,7 +240,7 @@ Scripts Python du projet :
 | `geometry.py` | construit la géométrie + mailleur gmsh (raffinement local, règle 3 él. dans t) |
 | `solver.py` | génère le `.inp` CalculiX, lance `ccx_2.23`, convertit `.frd → .vtu`, extrait σ_vM et u_max |
 | `run_study.py` | LHS + boucle 50 cas + écriture `results/summary.csv` |
-| `plot_pareto.py` | front de Pareto, sensibilité, loi multivariée |
+| `plot_pareto.py` | front de Pareto, sensibilité, loi multivariée (non précisée dans ce rapport intéermédiare) |
 | `render_stress.py` | rendu pyvista d'un cas avec champ de contraintes |
 | `check_through_thickness.py` | vérifie le nombre d'éléments dans l'épaisseur |
 
@@ -250,14 +250,12 @@ matplotlib 3.10, pyvista 0.47.
 
 **Accès aux 50 cas tests** — l'intégralité des fichiers d'entrée et
 de sortie (`.inp` CalculiX, `.frd` résultats binaires, `.vtu` pour
-ParaView) est mise à disposition sur Google Drive :
+ParaView) est mise à disposition ici :
 [Télécharger l'archive (50 cas)](https://drive.google.com/file/d/1wNusJc_AE2e0bbkhSZiOzS3ueYdR4I9P/view?usp=sharing).
 
 ---
 
 ## Références
-
-**Logiciels & méthodes numériques**
 
 [1] Dhondt, G. (2004). *The Finite Element Method for Three-Dimensional
 Thermomechanical Applications*. Wiley, Chichester. — Base théorique de
@@ -280,8 +278,6 @@ maillage 3D parallèle de gmsh.
 Tool for Large Data Visualization." In *Visualization Handbook*,
 Elsevier. ISBN 978-0123875822.
 
-**Méthode des éléments finis & qualité de maillage**
-
 [5] Zienkiewicz, O. C., Taylor, R. L., & Zhu, J. Z. (2013). *The Finite
 Element Method: Its Basis and Fundamentals* (7e éd.).
 Butterworth-Heinemann. — Référence canonique sur les éléments
@@ -301,8 +297,6 @@ de l'encastrement et du chargement.
 [8] Pilkey, W. D., & Pilkey, D. F. (2008). *Peterson's Stress
 Concentration Factors* (3e éd.). Wiley. ISBN 978-0470048245. —
 Tabulation des facteurs `Kt` pour congés et changements de section.
-
-**Plan d'expérience & analyse**
 
 [4] McKay, M. D., Beckman, R. J., & Conover, W. J. (1979). "A Comparison
 of Three Methods for Selecting Values of Input Variables in the Analysis
@@ -328,8 +322,6 @@ lois en produit de puissances ajustées par régression log-log.
 Approach* (7e éd.). Cengage. ISBN 978-1337558860. — Chapitre 3 : biais
 de variable omise et différence entre coefficient simple et coefficient
 partiel en régression multiple.
-
-**Mécanique des poutres**
 
 [14] Timoshenko, S. P., & Gere, J. M. (1972). *Mechanics of Materials*.
 Van Nostrand Reinhold. — Formule classique de la flexion d'une poutre
