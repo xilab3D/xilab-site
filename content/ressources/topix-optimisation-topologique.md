@@ -80,6 +80,8 @@ Le cas test classique de l'optimisation topologique est la **poutre encastrée-l
 
 La surface lissée finale (méthode Marching Cubes) est directement exportée en STL, notamment pour nos essais en impression 3D.
 
+{{< figure src="/images/topix/cantilever-mesh-marching-cubes.png" alt="Tests cantilever : différentes tailles de maille et réponse Marching Cubes" caption="Exemples de tests de différentes tailles de maille et de réponse de l'algo Marching Cubes." >}}
+
 ---
 
 ## Originalités de l'implémentation
