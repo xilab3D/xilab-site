@@ -1,5 +1,5 @@
 ---
-title: "XiLAB3D+"
+title: "XiLAB"
 description: "Bureau d'études et de R&D en ingénierie numérique — Conception, Simulation, IA"
 ---
 

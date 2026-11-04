@@ -1,11 +1,11 @@
 baseURL = "https://xilab.tech/"
 languageCode = "fr-FR"
 defaultContentLanguage = "fr"
-title = "XiLAB3D+"
+title = "XiLAB"
 theme = "PaperMod"
 
 [params.label]
-  text = "XiLAB3D+ : l'ingénierie agile"
+  text = "XiLAB : l'ingénierie agile"
   icon = "/favicon.svg"
   iconHeight = 22
 enableRobotsTXT = true
