@@ -39,8 +39,8 @@ enableInlineShortcodes = true
     subtitle = "Jumeaux Numériques, Simulation Numérique et Fabrication Additive"
     imageUrl = "images/logo-xilab.png"
     imageWidth = 160
-    imageHeight = 78
-    imageTitle = "XiLAB3D+ : l'ingénierie agile"
+    imageHeight = 77
+    imageTitle = "XiLAB : l'ingénierie agile"
 
     [[params.profileMode.buttons]]
       name = "À propos"

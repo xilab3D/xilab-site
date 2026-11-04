@@ -4,7 +4,7 @@ date: 2025-01-05
 description: "Communiqué de presse — XiLAB3D+, ingénierie numérique agile au service des PME, annonce l'obtention du statut JEI"
 ---
 
-<img src="/images/logo-xilab.png" alt="XiLAB3D+" style="max-width:220px; height:auto; margin-bottom:32px;">
+<img src="/images/logo-xilab.png" alt="XiLAB : l'ingénierie agile" style="max-width:220px; height:auto; margin-bottom:32px;">
 
 <a href="/pdf/communique-presse-xilab3d.pdf" class="blog-cat-btn" download>↓ Télécharger en PDF</a>
 
