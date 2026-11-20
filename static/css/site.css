@@ -364,6 +364,7 @@ ul.dots li::marker{color:var(--orange)}
 .quote{font-family:var(--display);font-size:clamp(20px,2.4vw,26px);line-height:1.35;border-left:3px solid var(--orange);padding-left:18px}
 .quote small{display:block;font-family:var(--body);font-size:15px;color:var(--muted);margin-top:6px}
 .values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.values.v3{grid-template-columns:repeat(3,minmax(0,1fr))}
 
 /* contact */
 .contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start}
@@ -408,6 +409,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 }
 @media (max-width:480px){
   .chain,.steps,.values,.partners,.figs,.vx-steps,.vx-solvers{grid-template-columns:minmax(0,1fr)}
+  .values.v3{grid-template-columns:minmax(0,1fr)}
   body{font-size:17px}
 }
 @media (prefers-reduced-motion:reduce){.fade{animation:none}}

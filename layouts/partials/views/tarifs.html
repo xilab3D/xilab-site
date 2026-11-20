@@ -15,6 +15,7 @@
       <div class="pack{{ if eq $i 1 }} best{{ end }}"><span class="days">{{ $d }} jours</span><span class="off">−{{ $r }} %</span><span class="pv">{{ partial "eur" $net }} <small>HT</small></span><span class="was">au lieu de <s>{{ partial "eur" $full }}</s></span><span class="pd">soit {{ partial "eur" $pj }} HT par jour</span></div>
       {{- end }}
     </div>
+    <div class="card" style="margin-top:22px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between"><div style="max-width:720px"><span class="kick">Espace client</span><p style="margin:6px 0 0">Avec un forfait, vous suivez en ligne vos jours restants et leur valeur, l'échéance et vos livrables, protégés par un code personnel. Les projets eux-mêmes sont menés sur Wimi, le portail collaboratif souverain que nous utilisons comme support de projet.</p></div><a class="btn" href="{{ "espace-client-exemple/" | relURL }}">Voir un exemple d'espace client</a></div>
     <p class="note" style="margin-top:16px">Au-delà de 45 jours, ou pour un programme pluriannuel : <a href="{{ "contact/" | relURL }}" class="linkbtn">sur demande</a>.</p>
   </div></section>
 
