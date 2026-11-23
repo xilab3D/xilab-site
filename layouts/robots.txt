@@ -1,2 +1,4 @@
 User-agent: *
-{{ if site.Params.essai }}Disallow: /{{ else }}Allow: /{{ end }}
+{{ if site.Params.essai }}Disallow: /{{ else }}Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}{{ end }}

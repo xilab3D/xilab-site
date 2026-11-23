@@ -7,7 +7,8 @@
   <section><div class="wrap contact-grid">
     <div class="cbox">
       <h3>Votre demande</h3>
-      <form id="cform" novalidate>
+      <form id="cform" novalidate data-key="{{ site.Params.web3forms_key }}" data-to="contact@xilab.tech">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
         <label for="c-name">Nom et société<input type="text" id="c-name" autocomplete="name"></label>
         <label for="c-mail">E-mail professionnel<input type="email" id="c-mail" autocomplete="email"></label>
         <label for="c-type">Vous êtes
@@ -15,8 +16,8 @@
         <label for="c-topic">Sujet
           <select id="c-topic"><option value="">Choisir</option><option>Audit de chaîne numérique</option><option>Interopérabilité</option><option>Maillage</option><option>Benchmark de simulation</option><option>Préparation FA / atelier</option><option>IA guidée par la physique</option><option>Jumeaux numériques</option><option>VoxFEM : démonstration ou licence</option><option>Formation</option><option>Candidature</option><option>Code d'accès aux rapports</option></select></label>
         <label for="c-msg">Votre message<textarea id="c-msg"></textarea></label>
-        <span class="err" id="c-err" hidden></span>
-        <div class="row"><button type="submit" class="btn">Envoyer la demande</button><span class="ok" id="c-ok" hidden>Maquette : le formulaire sera relié au site réel lors de l'intégration.</span></div>
+        <span class="err" id="c-err" role="alert" hidden></span>
+        <div class="row"><button type="submit" class="btn">Envoyer la demande</button><span class="ok" id="c-ok" role="status" hidden></span></div>
       </form>
     </div>
     <div class="side">
@@ -28,7 +29,7 @@
       <div class="cbox">
         <h3>Nous trouver</h3>
         <p>Centre-ville de Sisteron, Alpes-de-Haute-Provence. Bureaux et atelier de fabrication.</p>
-        <div class="row"><a class="btn ghost" href="https://www.linkedin.com/company/108783640/">LinkedIn</a><a href="{{ "presse/" | relURL }}" class="btn ghost">Espace presse</a><a class="btn ghost" href="https://xilab.tech/client/">Espace clients</a></div>
+        <div class="row"><a class="btn ghost" href="https://www.linkedin.com/company/108783640/">LinkedIn</a><a href="{{ "presse/" | relURL }}" class="btn ghost">Espace presse</a></div>
       </div>
     </div>
   </div></section>

@@ -53,14 +53,33 @@
   $$('.copy').forEach(b => b.addEventListener('click', () => { const el = document.getElementById(b.dataset.t); copyText(el.textContent, el, b, 'Copié'); }));
   const cb = $('#copy-boiler'); if (cb) cb.addEventListener('click', () => { const el = $('#boiler'); copyText(el.innerText, el, cb, 'Texte copié'); });
 
-  /* Formulaire (site d'essai : pas d'envoi) */
+  /* Formulaire de contact : envoi par Web3Forms (clé dans hugo.toml), sinon ouverture de la messagerie */
   const form = $('#cform');
   if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault(); const err = $('#c-err');
-      const m = $('#c-mail').value.trim(), msg = $('#c-msg').value.trim();
-      let t = ''; if (!$('#c-name').value.trim()) t = 'Indiquez votre nom et votre société.'; else if (!/^\S+@\S+\.\S+$/.test(m)) t = 'Indiquez une adresse e-mail valide.'; else if (!msg) t = 'Décrivez votre demande en quelques lignes.';
-      err.textContent = t; err.hidden = !t; $('#c-ok').hidden = !!t;
+    form.addEventListener('submit', async e => {
+      e.preventDefault(); const err = $('#c-err'), ok = $('#c-ok'), btn = form.querySelector('button[type=submit]');
+      const nom = $('#c-name').value.trim(), m = $('#c-mail').value.trim(), msg = $('#c-msg').value.trim(), type = $('#c-type').value, sujet = $('#c-topic').value;
+      let t = ''; if (!nom) t = 'Indiquez votre nom et votre société.'; else if (!/^\S+@\S+\.\S+$/.test(m)) t = 'Indiquez une adresse e-mail valide.'; else if (!msg) t = 'Décrivez votre demande en quelques lignes.';
+      err.textContent = t; err.hidden = !t; ok.hidden = true;
+      if (t) return;
+      if (form.querySelector('[name=botcheck]').checked) return; // robot
+      const objet = 'Demande depuis xilab.tech' + (sujet ? ' : ' + sujet : '');
+      const key = form.dataset.key;
+      if (!key) { // pas de clé : on prépare l'e-mail dans la messagerie du visiteur
+        const corps = msg + '\n\n' + nom + (type ? ' (' + type + ')' : '') + '\n' + m;
+        location.href = 'mailto:' + form.dataset.to + '?subject=' + encodeURIComponent(objet) + '&body=' + encodeURIComponent(corps);
+        return;
+      }
+      btn.disabled = true; const label = btn.textContent; btn.textContent = 'Envoi…';
+      try {
+        const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ access_key: key, subject: objet, from_name: 'Site xilab.tech', replyto: m, name: nom, email: m, 'Vous êtes': type || 'Non précisé', Sujet: sujet || 'Non précisé', message: msg, botcheck: false }) });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok || !j.success) throw new Error(j.message || r.status);
+        form.reset(); ok.textContent = 'Merci, votre message est bien envoyé. Nous revenons vers vous rapidement.'; ok.hidden = false;
+      } catch (x) {
+        err.textContent = "L'envoi n'a pas abouti. Écrivez-nous directement à " + form.dataset.to + '.'; err.hidden = false;
+      } finally { btn.disabled = false; btn.textContent = label; }
     });
     $$('#cform input, #cform textarea').forEach(i => i.addEventListener('input', () => { $('#c-err').hidden = true; }));
   }
