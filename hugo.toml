@@ -1,4 +1,4 @@
-baseURL = "https://xilab3d.github.io/xilab-site-essai/"
+baseURL = "https://xilab.tech/"
 languageCode = "fr-FR"
 defaultContentLanguage = "fr"
 title = "Xilab.tech"
@@ -7,4 +7,7 @@ enableRobotsTXT = true
 
 [params]
   description = "Xilab.tech développe les chaînes numériques de l'ingénierie : interopérabilité, maillage, simulation, fabrication additive, augmentées par une IA guidée par la physique."
-  essai = true
+  essai = false
+  # Clé Web3Forms du formulaire de contact (web3forms.com, créée avec contact@xilab.tech).
+  # Vide : le bouton « Envoyer » ouvre la messagerie du visiteur avec un e-mail pré-rempli.
+  web3forms_key = "f0853bee-2e76-4cb1-be6b-5cda256d67f5"
