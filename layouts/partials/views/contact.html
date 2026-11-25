@@ -30,8 +30,12 @@
         <h3>Nous trouver</h3>
         <p>Centre-ville de Sisteron, Alpes-de-Haute-Provence. Bureaux et atelier de fabrication.</p>
         <div class="row"><a class="btn ghost" href="https://www.linkedin.com/company/108783640/">LinkedIn</a><a href="{{ "presse/" | relURL }}" class="btn ghost">Espace presse</a></div>
-        <form id="cl-form" novalidate data-base="{{ "espace-client/" | relURL }}" style="border-top:1px solid var(--line);padding-top:14px">
-          <label for="cl-code">Espace client<input type="text" id="cl-code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Votre code d'accès"></label>
+      </div>
+      <div class="cbox">
+        <h3>Espace client</h3>
+        <p>Suivez votre projet en ligne : jours consommés, livrables et lien vers l'espace projet. Saisissez le code personnel transmis par Xilab.</p>
+        <form id="cl-form" novalidate data-base="{{ "espace-client/" | relURL }}">
+          <label for="cl-code">Code d'accès<input type="text" id="cl-code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Votre code d'accès"></label>
           <span class="err" id="cl-err" hidden></span>
           <div class="row"><button type="submit" class="btn">Accéder à mon espace</button></div>
         </form>
