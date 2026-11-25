@@ -30,6 +30,27 @@
         <h3>Nous trouver</h3>
         <p>Centre-ville de Sisteron, Alpes-de-Haute-Provence. Bureaux et atelier de fabrication.</p>
         <div class="row"><a class="btn ghost" href="https://www.linkedin.com/company/108783640/">LinkedIn</a><a href="{{ "presse/" | relURL }}" class="btn ghost">Espace presse</a></div>
+        <form id="cl-form" novalidate data-base="{{ "espace-client/" | relURL }}" style="border-top:1px solid var(--line);padding-top:14px">
+          <label for="cl-code">Espace client<input type="text" id="cl-code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Votre code d'accès"></label>
+          <span class="err" id="cl-err" hidden></span>
+          <div class="row"><button type="submit" class="btn">Accéder à mon espace</button></div>
+        </form>
+        <script>
+        {const f=document.getElementById('cl-form'),e=document.getElementById('cl-err');
+        const say=t=>{e.textContent=t;e.hidden=false},bad='Code inconnu. Vérifiez-le ou écrivez-nous à contact@xilab.tech.';
+        f.addEventListener('submit',async ev=>{ev.preventDefault();e.hidden=true;
+          const c=document.getElementById('cl-code').value.trim().toUpperCase().replace(/\s+/g,'');
+          if(!c){say("Saisissez votre code d'accès.");return}
+          if(!(window.crypto&&crypto.subtle)){say('Navigateur non compatible : écrivez-nous à contact@xilab.tech.');return}
+          const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(c));
+          const h=[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('').slice(0,16);
+          let d;try{const r=await fetch(f.dataset.base+h+'.json',{cache:'no-store'});if(!r.ok)throw 0;d=await r.json()}catch(_){say(bad);return}
+          try{const b64=x=>Uint8Array.from(atob(x),ch=>ch.charCodeAt(0));
+            const k0=await crypto.subtle.importKey('raw',new TextEncoder().encode(c),'PBKDF2',false,['deriveKey']);
+            const k=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(d.salt),iterations:d.it,hash:'SHA-256'},k0,{name:'AES-GCM',length:256},false,['decrypt']);
+            const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(d.iv)},k,b64(d.ct));
+            const html=new TextDecoder().decode(pt);document.open();document.write(html);document.close()}catch(_){say(bad)}})}
+        </script>
       </div>
     </div>
   </div></section>
